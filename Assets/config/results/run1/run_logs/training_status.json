@@ -1,0 +1,56 @@
+{
+    "worm_basic": {
+        "checkpoints": [
+            {
+                "steps": 13526,
+                "file_path": "results/run1/worm_basic/worm_basic-13526.onnx",
+                "reward": 0.047619047619047616,
+                "creation_time": 1727549914.788003,
+                "auxillary_file_paths": [
+                    "results/run1/worm_basic/worm_basic-13526.pt"
+                ]
+            },
+            {
+                "steps": 31417,
+                "file_path": "results/run1/worm_basic/worm_basic-31417.onnx",
+                "reward": 0.0,
+                "creation_time": 1727550176.567712,
+                "auxillary_file_paths": [
+                    "results/run1/worm_basic/worm_basic-31417.pt"
+                ]
+            },
+            {
+                "steps": 1499977,
+                "file_path": "results/run1/worm_basic/worm_basic-1499977.onnx",
+                "reward": 0.5376344086021505,
+                "creation_time": 1727554020.166568,
+                "auxillary_file_paths": [
+                    "results/run1/worm_basic/worm_basic-1499977.pt"
+                ]
+            },
+            {
+                "steps": 1643448,
+                "file_path": "results/run1/worm_basic/worm_basic-1643448.onnx",
+                "reward": 0.5882352941176471,
+                "creation_time": 1727554421.286316,
+                "auxillary_file_paths": [
+                    "results/run1/worm_basic/worm_basic-1643448.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1643448,
+            "file_path": "results/run1/worm_basic.onnx",
+            "reward": 0.5882352941176471,
+            "creation_time": 1727554421.286316,
+            "auxillary_file_paths": [
+                "results/run1/worm_basic/worm_basic-1643448.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.11.0"
+    }
+}
