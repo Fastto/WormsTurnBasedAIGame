@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 03e6fe8971320f142beb1ec5dd87e546
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 18125
+  packageName: Destructible 2D
+  packageVersion: 4.2.0
+  assetPath: Assets/Plugins/CW/Destructible2D/URP 2020.unitypackage
+  uploadId: 645711
