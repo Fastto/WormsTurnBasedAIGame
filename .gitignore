@@ -36,6 +36,8 @@ Icon?
 [Ll]ogs/
 UserSettings/
 MemoryCaptures/
+Assets/Plugins/CW/Shared/Common/Examples
+Assets/Plugins/CW/Destructible2D/Examples
 
 # Avoid tracking project-specific personal settings
 [Dd]ebug/
