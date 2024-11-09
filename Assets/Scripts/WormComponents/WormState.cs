@@ -29,7 +29,7 @@ namespace WormComponents
             ESCAPING = 3
         }
 
-        protected States _state = States.IDLE;
+        public States _state = States.IDLE;
 
         public States m_State
         {
@@ -39,7 +39,6 @@ namespace WormComponents
                 _state = value;
                 OnChange?.Invoke(value);
             }
-        } 
-     
+        }
     }
 }
