@@ -38,7 +38,7 @@ namespace DefaultNamespace
                 _timeAmount -= Time.deltaTime;
                 if (_timeAmount <= 0f)
                 {
-                    _timeAmount = 0;
+                   // _timeAmount = 0;
                     OnTimeOver?.Invoke();
                 }
                 
