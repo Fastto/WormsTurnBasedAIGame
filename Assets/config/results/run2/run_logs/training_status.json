@@ -1,0 +1,47 @@
+{
+    "worm_basic": {
+        "checkpoints": [
+            {
+                "steps": 499988,
+                "file_path": "results\\run2\\worm_basic\\worm_basic-499988.onnx",
+                "reward": null,
+                "creation_time": 1731355082.3181922,
+                "auxillary_file_paths": [
+                    "results\\run2\\worm_basic\\worm_basic-499988.pt"
+                ]
+            },
+            {
+                "steps": 999969,
+                "file_path": "results\\run2\\worm_basic\\worm_basic-999969.onnx",
+                "reward": 0.7574626865671642,
+                "creation_time": 1731355662.4622977,
+                "auxillary_file_paths": [
+                    "results\\run2\\worm_basic\\worm_basic-999969.pt"
+                ]
+            },
+            {
+                "steps": 1236340,
+                "file_path": "results\\run2\\worm_basic\\worm_basic-1236340.onnx",
+                "reward": 0.7447552447552448,
+                "creation_time": 1731355957.0883553,
+                "auxillary_file_paths": [
+                    "results\\run2\\worm_basic\\worm_basic-1236340.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1236340,
+            "file_path": "results\\run2\\worm_basic.onnx",
+            "reward": 0.7447552447552448,
+            "creation_time": 1731355957.0883553,
+            "auxillary_file_paths": [
+                "results\\run2\\worm_basic\\worm_basic-1236340.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.1+cpu"
+    }
+}
