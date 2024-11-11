@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Windmill_0: 5629372615036235299
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
