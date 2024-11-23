@@ -1,0 +1,65 @@
+{
+    "worm_basic": {
+        "checkpoints": [
+            {
+                "steps": 999932,
+                "file_path": "results\\run3\\worm_basic\\worm_basic-999932.onnx",
+                "reward": 0.13157894736842105,
+                "creation_time": 1732384433.88027,
+                "auxillary_file_paths": [
+                    "results\\run3\\worm_basic\\worm_basic-999932.pt"
+                ]
+            },
+            {
+                "steps": 1499987,
+                "file_path": "results\\run3\\worm_basic\\worm_basic-1499987.onnx",
+                "reward": 0.26666666666666666,
+                "creation_time": 1732385093.8745096,
+                "auxillary_file_paths": [
+                    "results\\run3\\worm_basic\\worm_basic-1499987.pt"
+                ]
+            },
+            {
+                "steps": 1999936,
+                "file_path": "results\\run3\\worm_basic\\worm_basic-1999936.onnx",
+                "reward": 0.42857142857142855,
+                "creation_time": 1732385744.078904,
+                "auxillary_file_paths": [
+                    "results\\run3\\worm_basic\\worm_basic-1999936.pt"
+                ]
+            },
+            {
+                "steps": 2499872,
+                "file_path": "results\\run3\\worm_basic\\worm_basic-2499872.onnx",
+                "reward": 0.25,
+                "creation_time": 1732386384.5788627,
+                "auxillary_file_paths": [
+                    "results\\run3\\worm_basic\\worm_basic-2499872.pt"
+                ]
+            },
+            {
+                "steps": 2665955,
+                "file_path": "results\\run3\\worm_basic\\worm_basic-2665955.onnx",
+                "reward": 0.5357142857142857,
+                "creation_time": 1732386594.6711183,
+                "auxillary_file_paths": [
+                    "results\\run3\\worm_basic\\worm_basic-2665955.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2665955,
+            "file_path": "results\\run3\\worm_basic.onnx",
+            "reward": 0.5357142857142857,
+            "creation_time": 1732386594.6711183,
+            "auxillary_file_paths": [
+                "results\\run3\\worm_basic\\worm_basic-2665955.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.3.1+cpu"
+    }
+}
