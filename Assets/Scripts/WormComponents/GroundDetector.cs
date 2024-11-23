@@ -1,6 +1,7 @@
 using System;
-using Unity.VisualScripting;
+using CW.Common;
 using UnityEngine;
+using Unity.VisualScripting;
 
 namespace WormComponents
 {
@@ -14,6 +15,16 @@ namespace WormComponents
         }
 
         private void OnCollisionExit2D(Collision2D other)
+        {
+            m_IsGrounded = false;
+        }
+
+        private void OnCollisionStay2D(Destructible2D.D2dEdgeCollider other)
+        {
+            m_IsGrounded = true;
+        }
+
+        private void OnCollisionExit2D(Destructible2D.D2dEdgeCollider other)
         {
             m_IsGrounded = false;
         }
