@@ -1,9 +1,6 @@
 using UnityEngine;
 
-namespace DefaultNamespace
+public class SpawningPoint : MonoBehaviour
 {
-    public class SpawningPoint : MonoBehaviour
-    {
         
-    }
 }

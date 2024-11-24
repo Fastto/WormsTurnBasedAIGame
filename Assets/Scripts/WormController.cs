@@ -60,6 +60,13 @@ public class WormController : MonoBehaviour
 
     protected void Update()
     {
+        //todo extract to component that checks is warm still on the map
+        if (transform.localPosition.y < -15f)
+        {
+            m_Health.m_Health = -1; //DIE
+            return;
+        }
+        
         if (m_State.m_State == WormState.States.MOVING && m_ControllingSignals.m_Aim)
         {
             m_State.m_State = WormState.States.SHOOTING;
@@ -113,5 +120,10 @@ public class WormController : MonoBehaviour
     {
         m_SpriteRenderer.color = color;
         m_HealthBar.m_Text.color = color;
+    }
+    
+    public Color GetColor()
+    {
+        return m_SpriteRenderer.color;
     }
 }

@@ -1,6 +1,7 @@
+using System;
 using System.Collections.Generic;
-using DefaultNamespace.ScriptableObjects;
 using EnvironmentControllers;
+using ScriptableObjects;
 using UnityEngine;
 
 public class Team
@@ -8,6 +9,8 @@ public class Team
     protected List<WormController> m_Worms = new List<WormController>();
     protected EnvironmentController _environment;
     protected TeamSO _settings;
+
+    protected int _currentWorm = -1;
         
     public Team(EnvironmentController env, TeamSO settings)
     {
@@ -18,6 +21,30 @@ public class Team
     public List<WormController> GetWorms()
     {
         return m_Worms;
+    }
+
+    public WormController GetNextWorm()
+    {
+        if (m_Worms.Count == 0)
+        {
+            throw new Exception("No worms found");
+        }
+        
+        if (_currentWorm == -1)
+        {
+            _currentWorm = 0;
+        }
+        else
+        {
+            _currentWorm += 1;
+        }
+
+        if (_currentWorm >= m_Worms.Count)
+        {
+            _currentWorm = 0;
+        }
+
+        return m_Worms[_currentWorm];
     }
 
     public void DestroyAllWorms()

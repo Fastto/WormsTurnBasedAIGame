@@ -10,58 +10,7 @@ namespace WormComponents
 {
     public class WormAgent : Agent
     {
-        [SerializeField] protected WormController m_WormController; 
-        [SerializeField] protected WormController m_EnemyWormController;
-
-        public void SetEnemy(WormController worm)
-        {
-            m_EnemyWormController = worm;
-        }
-        
-        public override void CollectObservations(VectorSensor sensor)
-        {
-            if (m_EnemyWormController != null)
-            {
-                var direction = (m_EnemyWormController.transform.position - m_WormController.transform.position)
-                    .normalized;
-                var distance = (m_EnemyWormController.transform.position - m_WormController.transform.position)
-                    .magnitude;
-
-                sensor.AddObservation(direction); // vector to enemy
-                sensor.AddObservation(distance); // distance to enemy
-            }
-            else
-            {
-                sensor.AddObservation(Vector3.zero); // vector to enemy
-                sensor.AddObservation(0); // distance to enemy
-            }
-
-            sensor.AddObservation(m_WormController.m_EnvironmentController.m_Timer.m_TimeLeft 
-                                  / m_WormController.m_EnvironmentController.m_Timer.m_TurnLength); // time to end of the phase
-            sensor.AddObservation((int)m_WormController.m_State.m_State); // current phase
-            sensor.AddObservation(m_WormController.m_Weapon.transform.right); // weapon direction
-            sensor.AddObservation(m_WormController.m_Weapon.m_Power); // weapon force
-            sensor.AddObservation(m_WormController.m_GroundDetector.m_IsGrounded); // Is Grounded
-
-
-            var points = m_WormController.m_Weapon.CalculateTrajectory(20, 0.1f);
-            if (m_EnemyWormController != null)
-            {
-                foreach (var point in points)
-                {
-                    sensor.AddObservation(((Vector2)m_EnemyWormController.transform.position - point).magnitude);
-                    Debug.DrawLine(m_WormController.m_Weapon.m_LaunchPoint.position, point);
-                }
-            }
-            else
-            {
-                foreach (var point in points)
-                {
-                    sensor.AddObservation(Vector2.zero);
-                }
-            }
-
-        }
+        [SerializeField] protected WormController m_WormController;
 
         public override void OnActionReceived(ActionBuffers actions) {
 

@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using DefaultNamespace;
 using UnityEngine;
-using WormComponents;
 using Random = UnityEngine.Random;
 
 namespace EnvironmentControllers

@@ -1,12 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace;
-using DefaultNamespace.ScriptableObjects;
-using UnityEngine;
+using ScriptableObjects;
 using WormComponents;
-using WormComponents.Agents;
-using Random = UnityEngine.Random;
 
 namespace EnvironmentControllers
 {
@@ -40,7 +35,7 @@ namespace EnvironmentControllers
                 {
                     //new turn
                     currentTeamId = GetNextTeamId(currentTeamId);
-                    var worm = m_Teams[currentTeamId].GetWorms()[0]; //todo: SUPPORTING many worms in 1 team
+                    var worm = m_Teams[currentTeamId].GetNextWorm();
                     worm.m_State.m_State = WormState.States.MOVING;
                     OnTurnStarted?.Invoke(this);
                     while (worm.m_State.m_State != WormState.States.IDLE && !IsGameFinished())
@@ -57,13 +52,6 @@ namespace EnvironmentControllers
         {
             m_Teams.ForEach(team => team.DestroyAllWorms());
             m_Teams.ForEach(team => team.Reset());
-
-            // HARDCODE FOR 1 VS 1 GAME ONLY
-            if(m_Teams[0].GetWorms()[0].TryGetComponent( out WormAgentPlaying agent1))
-                agent1.SetEnemy(m_Teams[1].GetWorms()[0]);
-            
-            if(m_Teams[1].GetWorms()[0].TryGetComponent( out WormAgentPlaying agent2))
-                agent2.SetEnemy(m_Teams[0].GetWorms()[0]);
 
             PlaceWormRandomly(new List<WormController>{m_Teams[0].GetWorms()[0], m_Teams[1].GetWorms()[0]});
         }

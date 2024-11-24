@@ -1,39 +1,38 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using WormComponents;
 
-public class HumanInput : MonoBehaviour
+namespace WormComponents
 {
-   public WormController m_WormController;
-
-   private void Update()
+   public class HumanInput : MonoBehaviour
    {
-      var xAxis = Input.GetAxis("Horizontal") > 0f ? 1 : Input.GetAxis("Horizontal") < 0f ? -1 : 0;
-      var yAxis = Input.GetAxis("Vertical") > 0f ? 1 : Input.GetAxis("Vertical") < 0f ? -1 : 0; 
-      var jumpButton = Input.GetButton("Jump"); 
-      var fireButton = Input.GetButton("Fire1");
+      public WormController m_WormController;
 
-      switch (m_WormController.m_State.m_State)
+      private void Update()
       {
-         case WormState.States.MOVING:
-            m_WormController.m_ControllingSignals.m_HorizontalMoving = xAxis;
-            m_WormController.m_ControllingSignals.m_Jump = jumpButton;
-            m_WormController.m_ControllingSignals.m_Aim = fireButton;
-            break;
-         case WormState.States.SHOOTING:
-            m_WormController.m_ControllingSignals.m_Aimning = xAxis;
-            m_WormController.m_ControllingSignals.m_PowerChanging = yAxis;
-            // m_WormController.m_ControllingSignals.m_AimCancel = jumpButton == 1;
-            m_WormController.m_ControllingSignals.m_Fire = jumpButton;
-            break;
-         case WormState.States.ESCAPING:
-            m_WormController.m_ControllingSignals.m_HorizontalMoving = xAxis;
-            m_WormController.m_ControllingSignals.m_Jump = jumpButton;
-            break;
-         default:
-            break;
+         var xAxis = Input.GetAxis("Horizontal") > 0f ? 1 : Input.GetAxis("Horizontal") < 0f ? -1 : 0;
+         var yAxis = Input.GetAxis("Vertical") > 0f ? 1 : Input.GetAxis("Vertical") < 0f ? -1 : 0; 
+         var jumpButton = Input.GetButton("Jump"); 
+         var fireButton = Input.GetButton("Fire1");
+
+         switch (m_WormController.m_State.m_State)
+         {
+            case WormState.States.MOVING:
+               m_WormController.m_ControllingSignals.m_HorizontalMoving = xAxis;
+               m_WormController.m_ControllingSignals.m_Jump = jumpButton;
+               m_WormController.m_ControllingSignals.m_Aim = fireButton;
+               break;
+            case WormState.States.SHOOTING:
+               m_WormController.m_ControllingSignals.m_Aimning = xAxis;
+               m_WormController.m_ControllingSignals.m_PowerChanging = yAxis;
+               // m_WormController.m_ControllingSignals.m_AimCancel = jumpButton == 1;
+               m_WormController.m_ControllingSignals.m_Fire = jumpButton;
+               break;
+            case WormState.States.ESCAPING:
+               m_WormController.m_ControllingSignals.m_HorizontalMoving = xAxis;
+               m_WormController.m_ControllingSignals.m_Jump = jumpButton;
+               break;
+            default:
+               break;
+         }
       }
    }
 }

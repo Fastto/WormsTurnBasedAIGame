@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using EnvironmentControllers;
 using UnityEngine;
 
-namespace DefaultNamespace.ScriptableObjects
+namespace ScriptableObjects
 {
     [CreateAssetMenu(fileName = "Team", menuName = "Team", order = 0)]
     public class TeamSO : ScriptableObject
