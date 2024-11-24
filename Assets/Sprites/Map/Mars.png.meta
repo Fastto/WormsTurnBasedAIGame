@@ -106,12 +106,12 @@ TextureImporter:
       name: Mars_0
       rect:
         serializedVersion: 2
-        x: 23
+        x: 0
         y: 0
-        width: 1168
-        height: 625
+        width: 1920
+        height: 626
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -132,7 +132,7 @@ TextureImporter:
         width: 627
         height: 612
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 13b4ccbf9fd2128409dbb35fa1e6f7e2
     internalID: 0
     vertices: []
     indices: 
