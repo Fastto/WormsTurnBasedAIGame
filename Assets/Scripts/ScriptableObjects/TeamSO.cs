@@ -8,5 +8,8 @@ namespace ScriptableObjects
         public GameObject m_WormPrefab;
         public Color m_Color;
         public int m_PlayersQuantity;
+
+        public int m_WormLayerId;
+        public LayerMask m_EnemyLayers;
     }
 }

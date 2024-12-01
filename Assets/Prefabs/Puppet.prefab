@@ -562,6 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Speed: 2
+  m_JumpSpeed: 4
   m_EnvironmentController: {fileID: 0}
   m_GroundDetector: {fileID: 6632846082786461839}
   m_Weapon: {fileID: 3894961585974876469}
@@ -572,6 +573,8 @@ MonoBehaviour:
   m_HealthBar: {fileID: 1696097203090663252}
   m_ProjectileTarget: {fileID: 5019222181262484225}
   m_SpriteRenderer: {fileID: 79242612901875719}
+  m_BodyPart: {fileID: 4821860170436788969}
+  m_IsSelfDestroyAllowed: 1
 --- !u!114 &5019222181262484225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,6 +614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1d5591846a409e8a1244cd35a3fbb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _state: 0
 --- !u!114 &6451969068055477107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,7 +629,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_WormController: {fileID: 2763547871718396296}
   m_Jump: 0
-  m_Aim: 0
   m_AimCancel: 0
   m_Fire: 0
   m_Aimning: 0
@@ -644,6 +647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809dc292f9744b72a2d27ab0b198dfb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StartingHealth: 100
 --- !u!1001 &2056042622132391850
 PrefabInstance:
   m_ObjectHideFlags: 0

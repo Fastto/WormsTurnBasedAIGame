@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using EnvironmentControllers;
 using ScriptableObjects;
 using UnityEngine;
+using WormComponents;
 
 public class Team
 {
@@ -63,6 +64,12 @@ public class Team
         {
             var worm = _environment.InstantiateWorm(_settings.m_WormPrefab);
             worm.SetColor(_settings.m_Color);
+            worm.ApplyLayer(_settings.m_WormLayerId);
+            if (worm.TryGetComponent(out WormAgent agent))
+            {
+                agent.ApplyEnemyLayers(_settings.m_EnemyLayers);
+            }
+                
             m_Worms.Add(worm);
             worm.OnDie += w =>
             {

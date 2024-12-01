@@ -23,6 +23,8 @@ public class WormController : MonoBehaviour
     public ProjectileTarget m_ProjectileTarget;
     public SpriteRenderer m_SpriteRenderer;
 
+    public GameObject m_BodyPart;
+
     // Events
     public Action<WormController> OnReset;
     public Action<WormController> OnDie;
@@ -120,6 +122,12 @@ public class WormController : MonoBehaviour
     {
         m_SpriteRenderer.color = color;
         m_HealthBar.m_Text.color = color;
+    }
+    
+    public void ApplyLayer(int layerId)
+    {
+        if(layerId > 1 && m_BodyPart != null)
+            m_BodyPart.layer = layerId;
     }
     
     public Color GetColor()

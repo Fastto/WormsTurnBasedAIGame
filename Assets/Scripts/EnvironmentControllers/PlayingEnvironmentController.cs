@@ -53,7 +53,10 @@ namespace EnvironmentControllers
             m_Teams.ForEach(team => team.DestroyAllWorms());
             m_Teams.ForEach(team => team.Reset());
 
-            PlaceWormRandomly(new List<WormController>{m_Teams[0].GetWorms()[0], m_Teams[1].GetWorms()[0]});
+            var worms = new List<WormController>();
+            m_Teams.ForEach(t => t.GetWorms().ForEach(w => worms.Add(w)));
+
+            PlaceWormRandomly(worms);
         }
 
         /**

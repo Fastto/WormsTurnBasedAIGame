@@ -442,6 +442,7 @@ MonoBehaviour:
   m_HealthBar: {fileID: 7671890111433972689}
   m_ProjectileTarget: {fileID: 6178767938478075194}
   m_SpriteRenderer: {fileID: 4744797152000159819}
+  m_BodyPart: {fileID: 7781774256853673793}
   m_IsSelfDestroyAllowed: 1
 --- !u!114 &3722480678969494826
 MonoBehaviour:
@@ -456,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 51
+    VectorObservationSize: 31
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0

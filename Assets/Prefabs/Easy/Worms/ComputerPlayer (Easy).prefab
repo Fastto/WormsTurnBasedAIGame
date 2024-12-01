@@ -347,6 +347,7 @@ MonoBehaviour:
   m_HealthBar: {fileID: 8173126941940067279}
   m_ProjectileTarget: {fileID: 6958219891569611205}
   m_SpriteRenderer: {fileID: 4257830804239745482}
+  m_BodyPart: {fileID: 2789851666711065602}
   m_IsSelfDestroyAllowed: 1
 --- !u!114 &6853791817923606336
 MonoBehaviour:

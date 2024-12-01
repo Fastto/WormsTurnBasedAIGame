@@ -1,24 +1,26 @@
 using Unity.MLAgents;
+using Util;
+using WormComponents.Agents.Easy;
 
 namespace WormComponents.Agents.Medium
 {
-    public class ComputerPlayerMedium : WormAgent
+    public class ComputerPlayerMedium : WormAgentMedium
     {
-        // TODO
-        
-        // private void Start()
-        // {
-        //     m_WormController.m_State.OnChange += state =>
-        //     {
-        //         if (state == WormState.States.IDLE)
-        //         {
-        //             GetComponent<DecisionRequester>().enabled = false;
-        //         }
-        //         else if (state == WormState.States.MOVING)
-        //         {
-        //             GetComponent<DecisionRequester>().enabled = true;
-        //         }
-        //     };
-        // }
+        private new void Start()
+        {
+            _ignoreEpisodeBegin = true;
+            
+            m_WormController.m_State.OnChange += state =>
+            {
+                if (state == WormState.States.IDLE)
+                {
+                    GetComponent<DecisionRequester>().enabled = false;
+                }
+                else if (state == WormState.States.MOVING)
+                {
+                    GetComponent<DecisionRequester>().enabled = true;
+                }
+            };
+        }
     }
 }
