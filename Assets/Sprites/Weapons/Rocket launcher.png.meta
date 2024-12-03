@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rocket launcher_0: -2287797700980212028
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
