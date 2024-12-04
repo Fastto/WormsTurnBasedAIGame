@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: AI_1_RED_Team (Easy)
   m_EditorClassIdentifier: 
   m_WormPrefab: {fileID: 2838947000859742633, guid: 1cb9fd4750bbe44e2ab91ed7405b32fe, type: 3}
-  m_Color: {r: 1, g: 0.017929167, b: 0, a: 1}
+  m_UI_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Worm_Color: {r: 1, g: 1, b: 1, a: 1}
   m_PlayersQuantity: 1
-  m_IsAITeam: 1
+  m_WormLayerId: 0
+  m_EnemyLayers:
+    serializedVersion: 2
+    m_Bits: 0
