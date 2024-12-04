@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6095062076437078024}
   m_Layer: 6
-  m_Name: Landscape
+  m_Name: Landscape (easy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
