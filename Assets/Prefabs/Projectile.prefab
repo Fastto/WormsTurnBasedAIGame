@@ -149,6 +149,8 @@ GameObject:
   - component: {fileID: 8050232909129296880}
   - component: {fileID: 5435899106910176075}
   - component: {fileID: 5244726425750052903}
+  - component: {fileID: 977568747562498939}
+  - component: {fileID: 8731495876042725827}
   m_Layer: 7
   m_Name: Projectile
   m_TagString: Untagged
@@ -211,3 +213,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &977568747562498939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5753890420319312002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4bbf9abb895c248917caccbfc6043a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8731495876042725827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5753890420319312002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b06713989bf4974eb4c04152bdaa60d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  threshold: 1
+  delay: 1
+  prefab: {fileID: 5065598738458899766, guid: c4a228e2e2f188a498f341779337410f, type: 3}
+  offset: 0.1
+  rotateTo: 0
+  onImpact:
+    m_PersistentCalls:
+      m_Calls: []
+  cooldown: 0
