@@ -17,6 +17,11 @@ public class Projectile : MonoBehaviour
         return 34;
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Destroy(gameObject);
+    }
+
     public void Launch(Vector2 velocity)
     {
         StartCoroutine(LaunchAfterFrame(velocity));
