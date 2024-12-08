@@ -242,7 +242,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   threshold: 1
   delay: 1
-  prefab: {fileID: 5065598738458899766, guid: c4a228e2e2f188a498f341779337410f, type: 3}
+  prefab: {fileID: 8734106137144288672, guid: 49a8e9e037dfac442818233ee76db366, type: 3}
   offset: 0.1
   rotateTo: 0
   onImpact:

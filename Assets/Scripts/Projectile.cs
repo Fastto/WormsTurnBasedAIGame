@@ -17,7 +17,7 @@ public class Projectile : MonoBehaviour
         return 34;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionExit2D(Collision2D other)
     {
         Destroy(gameObject);
     }
