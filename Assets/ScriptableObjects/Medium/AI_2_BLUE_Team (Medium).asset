@@ -19,4 +19,4 @@ MonoBehaviour:
   m_WormLayerId: 13
   m_EnemyLayers:
     serializedVersion: 2
-    m_Bits: 6144
+    m_Bits: 4096
