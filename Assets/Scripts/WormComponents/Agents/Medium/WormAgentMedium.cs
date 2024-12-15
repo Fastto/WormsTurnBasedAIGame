@@ -14,7 +14,7 @@ namespace WormComponents.Agents.Medium
 
         protected void Start()
         {
-            m_WormController.SetColor(m_MyTeamSettings.m_Worm_Color);
+            m_WormController.SetColor(m_MyTeamSettings.m_UI_Color);
             m_WormController.ApplyLayer(m_MyTeamSettings.m_WormLayerId);
             ApplyEnemyLayers(m_MyTeamSettings.m_EnemyLayers);
             m_WormController.m_IsSelfDestroyAllowed = false;
@@ -23,7 +23,7 @@ namespace WormComponents.Agents.Medium
             // 1st is friend, rest are enemies
             // sp that we pay fine for the targeting first and rewarding for the rest
             m_Puppets[0].m_IsSelfDestroyAllowed = false;
-            m_Puppets[0].SetColor(m_MyTeamSettings.m_Worm_Color);
+            m_Puppets[0].SetColor(m_MyTeamSettings.m_UI_Color);
             m_Puppets[0].ApplyLayer(m_MyTeamSettings.m_WormLayerId);
             m_Puppets[0].m_ProjectileTarget.OnTouch += damage =>
             {
@@ -34,7 +34,7 @@ namespace WormComponents.Agents.Medium
             for (int i = 1; i < m_Puppets.Count; i++)
             {
                 m_Puppets[i].m_IsSelfDestroyAllowed = false;
-                m_Puppets[i].SetColor(m_EnemyTeamSettings.m_Worm_Color);
+                m_Puppets[i].SetColor(m_EnemyTeamSettings.m_UI_Color);
                 m_Puppets[i].ApplyLayer(m_EnemyTeamSettings.m_WormLayerId);
                 m_Puppets[i].m_ProjectileTarget.OnTouch += damage =>
                 {

@@ -120,7 +120,7 @@ public class WormController : MonoBehaviour
 
     public void SetColor(Color color)
     {
-        m_SpriteRenderer.color = color;
+        // m_SpriteRenderer.color = color;
         m_HealthBar.m_Text.color = color;
     }
     

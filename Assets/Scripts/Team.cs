@@ -63,7 +63,7 @@ public class Team
         for (int i = 0; i < _settings.m_PlayersQuantity; i++)
         {
             var worm = _environment.InstantiateWorm(_settings.m_WormPrefab);
-            worm.SetColor(_settings.m_Worm_Color);
+            worm.SetColor(_settings.m_UI_Color);
             worm.ApplyLayer(_settings.m_WormLayerId);
             if (worm.TryGetComponent(out WormAgent agent))
             {
