@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2753411061307373244}
   - component: {fileID: 7038896582867071240}
-  - component: {fileID: 1586988772645857035}
+  - component: {fileID: 6831298805842950884}
   m_Layer: 7
   m_Name: ProjectileSprite
   m_TagString: Untagged
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.8962264, g: 0.5918923, b: 0, a: 1}
+  m_Sprite: {fileID: 6711257252158638106, guid: 2b3215ea877720247b8901feb6c75b3e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,8 +87,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &1586988772645857035
-PolygonCollider2D:
+--- !u!68 &6831298805842950884
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,21 +122,22 @@ PolygonCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_EdgeRadius: 0
   m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
-  m_UseDelaunayMesh: 0
+  - {x: 0.35, y: 0}
+  - {x: 0.254, y: -0.13}
+  - {x: -0.145, y: -0.13}
+  - {x: -0.195, y: -0.225}
+  - {x: -0.35, y: -0.225}
+  - {x: -0.35, y: 0.225}
+  - {x: -0.195, y: 0.225}
+  - {x: -0.145, y: 0.13}
+  - {x: 0.254, y: 0.13}
+  - {x: 0.35, y: 0}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &5753890420319312002
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +149,8 @@ GameObject:
   - component: {fileID: 8050232909129296880}
   - component: {fileID: 5435899106910176075}
   - component: {fileID: 5244726425750052903}
+  - component: {fileID: 977568747562498939}
+  - component: {fileID: 8731495876042725827}
   m_Layer: 7
   m_Name: Projectile
   m_TagString: Untagged
@@ -210,3 +213,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &977568747562498939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5753890420319312002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4bbf9abb895c248917caccbfc6043a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8731495876042725827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5753890420319312002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b06713989bf4974eb4c04152bdaa60d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  threshold: 1
+  delay: 1
+  prefab: {fileID: 8734106137144288672, guid: 49a8e9e037dfac442818233ee76db366, type: 3}
+  offset: 0.1
+  rotateTo: 0
+  onImpact:
+    m_PersistentCalls:
+      m_Calls: []
+  cooldown: 0

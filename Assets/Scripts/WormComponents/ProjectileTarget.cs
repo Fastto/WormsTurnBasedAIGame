@@ -11,7 +11,7 @@ namespace WormComponents
         {
             if (other.gameObject.TryGetComponent(out Projectile projectile)) {
                 OnTouch?.Invoke(projectile.GetDamage());
-                Destroy(projectile.gameObject);
+                // Destroy(projectile.gameObject);
             }
         }
     }

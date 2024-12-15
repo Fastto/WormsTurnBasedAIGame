@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: AI_2_BLUE_Team (Medium)
   m_EditorClassIdentifier: 
   m_WormPrefab: {fileID: 5988141108363509067, guid: 5f71ea97b0e284af08b0637686f2d63e, type: 3}
-  m_Color: {r: 0.03127098, g: 0, b: 1, a: 1}
+  m_UI_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Worm_Color: {r: 1, g: 1, b: 1, a: 1}
   m_PlayersQuantity: 2
   m_WormLayerId: 13
   m_EnemyLayers:
     serializedVersion: 2
-    m_Bits: 6144
+    m_Bits: 4096

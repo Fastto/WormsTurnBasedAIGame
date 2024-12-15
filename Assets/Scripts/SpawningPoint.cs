@@ -5,6 +5,6 @@ public class SpawningPoint : MonoBehaviour
 {
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(transform.position, 1f);
+        Gizmos.DrawSphere(transform.position, 0.5f);
     }
 }
