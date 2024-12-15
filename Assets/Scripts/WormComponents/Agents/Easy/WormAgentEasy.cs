@@ -35,6 +35,12 @@ namespace WormComponents.Agents.Easy
                 EndEpisode();
             };
 
+            m_WormController.m_Health.OnDie += () =>
+            {
+                SetReward(-1);
+                EndEpisode();
+            };
+
             m_WormController.m_IsSelfDestroyAllowed = false;
             m_EnemyWormController.m_IsSelfDestroyAllowed = false;
         }

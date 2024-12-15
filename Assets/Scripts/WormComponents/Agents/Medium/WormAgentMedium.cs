@@ -57,6 +57,12 @@ namespace WormComponents.Agents.Medium
 
                 EndEpisode();
             };
+            
+            m_WormController.m_Health.OnDie += () =>
+            {
+                SetReward(-1);
+                EndEpisode();
+            };
         }
 
         public override void OnEpisodeBegin()
