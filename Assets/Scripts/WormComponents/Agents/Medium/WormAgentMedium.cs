@@ -103,5 +103,19 @@ namespace WormComponents.Agents.Medium
                 Debug.DrawLine(m_WormController.m_Weapon.m_LaunchPoint.position, point);
             }
         }
+        
+        public override void ApplyEnemyLayers(LayerMask lm)
+        {
+            var sensors = GetComponents<RayPerceptionSensorComponent2D>();
+            foreach (var sensor in sensors)
+            {
+                if (sensor.RaySensor.GetName() == "EnemySensor") 
+                {
+                    Debug.Log(sensor.name + " " + sensor.RaySensor.GetName());
+                    sensor.RayLayerMask = lm;
+                    break;
+                }
+            }
+        }
     }
 }

@@ -134,19 +134,9 @@ namespace WormComponents
                 actionMask.SetActionEnabled(3, 0, false);
             }
         }
-
-        public void ApplyEnemyLayers(LayerMask lm)
+        
+        public virtual void ApplyEnemyLayers(LayerMask lm)
         {
-            var sensors = GetComponents<RayPerceptionSensorComponent2D>();
-            foreach (var sensor in sensors)
-            {
-                if (sensor.RaySensor.GetName() == "EnemySensor") 
-                {
-                    Debug.Log(sensor.name + " " + sensor.RaySensor.GetName());
-                    sensor.RayLayerMask = lm;
-                    break;
-                }
-            }
         }
     }
 }
