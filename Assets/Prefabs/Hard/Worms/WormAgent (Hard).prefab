@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: worm_medium
+  m_BehaviorName: worm_hard
   TeamId: 0
   m_UseChildSensors: 0
   m_UseChildActuators: 1
