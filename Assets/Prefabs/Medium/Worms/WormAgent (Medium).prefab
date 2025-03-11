@@ -631,7 +631,7 @@ MonoBehaviour:
     m_Bits: 0
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
-  rayMissColor: {r: 0, g: 1, b: 0.0022239685, a: 1}
+  rayMissColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &6324173889302229888
 GameObject:
   m_ObjectHideFlags: 0
