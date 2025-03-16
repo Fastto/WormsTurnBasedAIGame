@@ -40,6 +40,9 @@ namespace WormComponents
         public int m_Aimning = 0;
         public int m_PowerChanging = 0;
         
+        public int m_WeaponId = 0;
+        public int m_TargetWeaponId = 0;
+        
         // for AIM analig controlling (by Mouse)
         public float m_SetPower = 0;
         public Vector2 m_SetAim = Vector2.zero;

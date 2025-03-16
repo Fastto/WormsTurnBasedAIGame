@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 21285484}
   - component: {fileID: 11414548}
   - component: {fileID: 11488070}
+  - component: {fileID: 4605674509226855033}
   m_Layer: 0
-  m_Name: Laser Projectile
+  m_Name: ProjectileBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 103696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.67, y: 401.49454, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 9082429109045791810, guid: 975e1d14dc35d5e489eeaa536bcd6d48, type: 3}
+  m_Sprite: {fileID: 2208703988740019828, guid: 03573c5f1444dea47b7c401c5267ca43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -132,3 +133,15 @@ MonoBehaviour:
   lifeMax: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
   startLocalScale: {x: 0, y: 0, z: 0}
+--- !u!114 &4605674509226855033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00e09206cc634b14b2f365e677c88d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

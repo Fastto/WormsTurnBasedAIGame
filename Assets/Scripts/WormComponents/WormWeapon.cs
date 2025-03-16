@@ -13,8 +13,9 @@ namespace WormComponents
         [SerializeField] private GameObject m_AimSprite;
         [SerializeField] private float m_MinScale = 1f;
         [SerializeField] private float m_MaxScale = 3f;
+        public bool m_PowerCanBeControlled = true;
 
-        private float _power = .5f;
+        private float _power = 1f;
         public float m_Power
         {
             get => _power;
@@ -72,7 +73,9 @@ namespace WormComponents
         public void RandomConfig()
         {
             transform.Rotate(new Vector3(0, 0, Random.Range(0, 360)));
-            m_Power = Random.value;
+            
+            if(m_PowerCanBeControlled)
+                m_Power = Random.value;
         }
     }
 }

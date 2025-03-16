@@ -84,6 +84,7 @@ MonoBehaviour:
   m_AimSprite: {fileID: 7885602178452714443}
   m_MinScale: 1
   m_MaxScale: 3
+  m_PowerCanBeControlled: 1
 --- !u!1 &4651902449449718534
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +524,9 @@ MonoBehaviour:
   m_JumpSpeed: 4
   m_EnvironmentController: {fileID: 0}
   m_GroundDetector: {fileID: 6632846082786461839}
-  m_Weapon: {fileID: 3894961585974876469}
+  m_ActiveWeapon: {fileID: 3894961585974876469}
+  m_Weapons:
+  - {fileID: 3894961585974876469}
   m_State: {fileID: 4133953819034237474}
   m_ControllingSignals: {fileID: 6451969068055477107}
   m_RigidBody: {fileID: 3532760843118252950}
@@ -591,6 +594,8 @@ MonoBehaviour:
   m_Fire: 0
   m_Aimning: 0
   m_PowerChanging: 0
+  m_WeaponId: 0
+  m_TargetWeaponId: 0
   m_SetPower: 0
   m_SetAim: {x: 0, y: 0}
 --- !u!114 &8156245579522031500

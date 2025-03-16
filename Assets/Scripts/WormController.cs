@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using EnvironmentControllers;
 using UnityEngine;
+using UnityEngine.Serialization;
 using WormComponents;
 using Random = UnityEngine.Random;
 
@@ -14,7 +16,8 @@ public class WormController : MonoBehaviour
     public EnvironmentController m_EnvironmentController;
     
     public GroundDetector m_GroundDetector;
-    public Weapon m_Weapon;
+    public Weapon m_ActiveWeapon;
+    public List<Weapon> m_Weapons;
     public WormState m_State;
     public ControllingSignals m_ControllingSignals;
     public Rigidbody2D m_RigidBody;
@@ -49,6 +52,30 @@ public class WormController : MonoBehaviour
                 m_State.m_State = WormState.States.IDLE;
             }
         };
+
+        m_ControllingSignals.m_TargetWeaponId = 0;
+        SetWeapon(0);
+    }
+
+    public void SetWeapon(int id)
+    {
+        if (m_Weapons.Count == 0) 
+            throw new Exception("No Weapons Configured for Worn");
+        
+        if(id > m_Weapons.Count - 1)
+            return;
+
+        m_Weapons.ForEach(w => w.gameObject.SetActive(false));
+        
+        for (int i = 0; i < m_Weapons.Count; i++)
+        {
+            if (id == i)
+            {
+                m_ActiveWeapon = m_Weapons[i];
+                m_Weapons[i].gameObject.SetActive(true);
+                break;
+            }
+        }
     }
 
     public virtual void Reset()
@@ -57,6 +84,8 @@ public class WormController : MonoBehaviour
         m_RigidBody.angularVelocity = 0f;
         m_State.m_State = WormState.States.IDLE;
         m_Health.Reset();
+        m_ControllingSignals.m_TargetWeaponId = 0;
+        SetWeapon(0);
         OnReset?.Invoke(this);
     }
 
@@ -69,7 +98,18 @@ public class WormController : MonoBehaviour
             return;
         }
         
-        if (m_State.m_State == WormState.States.MOVING && m_ControllingSignals.m_Aim)
+        if ((m_State.m_State == WormState.States.MOVING || m_State.m_State == WormState.States.SHOOTING) 
+            && m_ControllingSignals.m_WeaponId != m_ControllingSignals.m_TargetWeaponId)
+        {
+            SetWeapon(m_ControllingSignals.m_TargetWeaponId);
+            m_ControllingSignals.m_WeaponId = m_ControllingSignals.m_TargetWeaponId;
+        } 
+        else if (m_ControllingSignals.m_WeaponId != m_ControllingSignals.m_TargetWeaponId)
+        {
+            // reset changing weapon signal if the state is not right
+            m_ControllingSignals.m_TargetWeaponId = m_ControllingSignals.m_WeaponId;
+        }
+        else if (m_State.m_State == WormState.States.MOVING && m_ControllingSignals.m_Aim)
         {
             m_State.m_State = WormState.States.SHOOTING;
             m_ControllingSignals.m_Aim = false;
@@ -88,9 +128,13 @@ public class WormController : MonoBehaviour
         }
         else if (m_State.m_State == WormState.States.SHOOTING)
         {
-            m_Weapon.transform.Rotate(new Vector3(0, 0, -m_ControllingSignals.m_Aimning * Time.deltaTime * 45f));
-            m_Weapon.m_Power += m_ControllingSignals.m_PowerChanging * Time.deltaTime * 1f;
-                
+            m_ActiveWeapon.transform.Rotate(new Vector3(0, 0, -m_ControllingSignals.m_Aimning * Time.deltaTime * 45f));
+
+            if (m_ActiveWeapon.m_PowerCanBeControlled)
+            {
+                m_ActiveWeapon.m_Power += m_ControllingSignals.m_PowerChanging * Time.deltaTime * 1f;
+            }
+            
             if (m_ControllingSignals.m_AimCancel)
             {
                 m_State.m_State = WormState.States.MOVING;
@@ -100,7 +144,7 @@ public class WormController : MonoBehaviour
                 
             if (m_ControllingSignals.m_Fire)
             {
-                m_Weapon.Fire();
+                m_ActiveWeapon.Fire();
                 m_ControllingSignals.m_Fire = false;
                     
                 m_State.m_State = WormState.States.ESCAPING;

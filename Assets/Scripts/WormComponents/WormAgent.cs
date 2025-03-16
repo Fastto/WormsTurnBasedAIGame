@@ -71,7 +71,7 @@ namespace WormComponents
 
                 // Fire
                 actionMask.SetActionEnabled(3, 0, true); // Just stay
-                actionMask.SetActionEnabled(3, 0, false);
+                actionMask.SetActionEnabled(3, 1, false);
             }
             else if (m_WormController.m_State.m_State == WormState.States.MOVING)
             {
@@ -91,7 +91,7 @@ namespace WormComponents
 
                 // Fire -- Switching to aim
                 actionMask.SetActionEnabled(3, 0, true); 
-                actionMask.SetActionEnabled(3, 0, true);
+                actionMask.SetActionEnabled(3, 1, true);
             } 
             else if (m_WormController.m_State.m_State == WormState.States.SHOOTING)
             {
@@ -111,7 +111,7 @@ namespace WormComponents
 
                 // Fire. 
                 actionMask.SetActionEnabled(3, 0, true); 
-                actionMask.SetActionEnabled(3, 0, false);
+                actionMask.SetActionEnabled(3, 1, false);
             }
             else if (m_WormController.m_State.m_State == WormState.States.ESCAPING)
             {
@@ -131,7 +131,7 @@ namespace WormComponents
 
                 // Fire. Not Used
                 actionMask.SetActionEnabled(3, 0, true); // Just stay
-                actionMask.SetActionEnabled(3, 0, false);
+                actionMask.SetActionEnabled(3, 1, false);
             }
         }
         

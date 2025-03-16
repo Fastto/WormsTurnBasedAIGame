@@ -72,7 +72,7 @@ namespace WormComponents.Agents.Hard
                 return;
 
             m_WormController.Reset();
-            m_WormController.m_Weapon.RandomConfig();
+            m_WormController.m_ActiveWeapon.RandomConfig();
 
             foreach (var puppet in m_Puppets)
             {
@@ -92,16 +92,16 @@ namespace WormComponents.Agents.Hard
                                   / m_WormController.m_EnvironmentController.m_Timer
                                       .m_TurnLength); // time to end of the phase
             sensor.AddObservation((int)m_WormController.m_State.m_State); // current phase
-            sensor.AddObservation(m_WormController.m_Weapon.transform.right); // weapon direction
-            sensor.AddObservation(m_WormController.m_Weapon.m_Power); // weapon force
+            sensor.AddObservation(m_WormController.m_ActiveWeapon.transform.right); // weapon direction
+            sensor.AddObservation(m_WormController.m_ActiveWeapon.m_Power); // weapon force
             sensor.AddObservation(m_WormController.m_GroundDetector.m_IsGrounded); // Is Grounded
             
-            var points = m_WormController.m_Weapon.CalculateTrajectory(20, 0.1f);
+            var points = m_WormController.m_ActiveWeapon.CalculateTrajectory(20, 0.1f);
             foreach (var point in points)
             {
                 sensor.AddObservation(((Vector2)m_WormController.transform.position - point).magnitude);
                 sensor.AddObservation(((Vector2)m_WormController.transform.position - point).normalized);
-                Debug.DrawLine(m_WormController.m_Weapon.m_LaunchPoint.position, point);
+                Debug.DrawLine(m_WormController.m_ActiveWeapon.m_LaunchPoint.position, point);
             }
         }
         

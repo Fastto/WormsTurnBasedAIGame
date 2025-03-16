@@ -6,6 +6,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
+    public int m_Damage = 34;
 
     private void Start()
     {
@@ -14,7 +15,7 @@ public class Projectile : MonoBehaviour
 
     public virtual int GetDamage()
     {
-        return 34;
+        return m_Damage;
     }
 
     private void OnCollisionExit2D(Collision2D other)
