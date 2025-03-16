@@ -73,6 +73,7 @@ public class WormController : MonoBehaviour
             {
                 m_ActiveWeapon = m_Weapons[i];
                 m_Weapons[i].gameObject.SetActive(true);
+                m_Weapons[i].RefreshAim();
                 break;
             }
         }
@@ -103,7 +104,6 @@ public class WormController : MonoBehaviour
         {
             SetWeapon(m_ControllingSignals.m_TargetWeaponId);
             m_ControllingSignals.m_WeaponId = m_ControllingSignals.m_TargetWeaponId;
-            m_State.m_State = m_State.m_State;
         } 
         else if (m_ControllingSignals.m_WeaponId != m_ControllingSignals.m_TargetWeaponId)
         {

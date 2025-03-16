@@ -33,8 +33,13 @@ namespace WormComponents
             m_AimSprite.SetActive(false);
             m_WormController.m_State.OnChange +=state =>
             {
-                m_AimSprite.SetActive(state == WormState.States.SHOOTING);
+                RefreshAim();
             };
+        }
+
+        public void RefreshAim()
+        {
+            m_AimSprite.SetActive(m_WormController.m_State.m_State == WormState.States.SHOOTING);
         }
 
         public void Fire()
