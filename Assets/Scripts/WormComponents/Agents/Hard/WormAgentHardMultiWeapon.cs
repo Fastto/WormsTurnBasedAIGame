@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using ScriptableObjects;
 using Unity.MLAgents.Actuators;
@@ -13,7 +14,8 @@ namespace WormComponents.Agents.Hard
         [SerializeField] private TeamSO m_MyTeamSettings;
         [SerializeField] private TeamSO m_EnemyTeamSettings;
         [SerializeField] private Camera m_WormsCamera;
-        
+
+        private bool _endEpisodeRequested = false; 
         protected void Start()
         {
             m_WormController.SetColor(m_MyTeamSettings.m_UI_Color);
@@ -36,16 +38,28 @@ namespace WormComponents.Agents.Hard
                 EndEpisode();
             };
 
-            for (int i = 1; i < m_Puppets.Count; i++)
+            if (m_Puppets.Count > 0)
             {
-                m_Puppets[i].m_IsSelfDestroyAllowed = false;
-                m_Puppets[i].SetColor(m_EnemyTeamSettings.m_UI_Color);
-                m_Puppets[i].ApplyLayer(m_EnemyTeamSettings.m_WormLayerId);
-                m_Puppets[i].m_ProjectileTarget.OnTouch += damage =>
+                var skip = true;
+                
+                m_Puppets.ForEach(p =>
                 {
-                    SetReward((damage / m_Puppets[i].m_Health.m_StartingHealth)); //  rewards for rest
-                    EndEpisode();
-                };
+                    if (skip)
+                    {
+                        skip = false;
+                        return;
+                    }
+                    
+                    p.m_IsSelfDestroyAllowed = false;
+                    p.SetColor(m_EnemyTeamSettings.m_UI_Color);
+                    p.ApplyLayer(m_EnemyTeamSettings.m_WormLayerId);
+                    p.m_ProjectileTarget.OnTouch += damage =>
+                    {
+                        SetReward(((float)damage / (float)100f)); //  rewards for rest
+                        if(!_endEpisodeRequested)
+                            StartCoroutine(EndEpisodeIn(1));
+                    };
+                });
             }
 
             m_WormController.m_EnvironmentController.OnTurnStarted += env =>
@@ -68,6 +82,14 @@ namespace WormComponents.Agents.Hard
                 SetReward(-1);
                 EndEpisode();
             };
+        }
+
+        protected IEnumerator EndEpisodeIn(float sec)
+        {
+            _endEpisodeRequested = true;
+            yield return new WaitForSeconds(sec);
+            _endEpisodeRequested = false;
+            EndEpisode();
         }
 
         public override void OnEpisodeBegin()

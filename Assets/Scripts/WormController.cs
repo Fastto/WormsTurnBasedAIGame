@@ -103,6 +103,7 @@ public class WormController : MonoBehaviour
         {
             SetWeapon(m_ControllingSignals.m_TargetWeaponId);
             m_ControllingSignals.m_WeaponId = m_ControllingSignals.m_TargetWeaponId;
+            m_State.m_State = m_State.m_State;
         } 
         else if (m_ControllingSignals.m_WeaponId != m_ControllingSignals.m_TargetWeaponId)
         {

@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public int m_Damage = 34;
 
+    public float m_LifeTime = 5f;
+
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -37,7 +39,7 @@ public class Projectile : MonoBehaviour
     
     private IEnumerator SelfDestroy()
     {
-        yield return new WaitForSeconds(5); //todo remove hardcode
+        yield return new WaitForSeconds(m_LifeTime); //todo remove hardcode
         Destroy(gameObject);
     }
 }

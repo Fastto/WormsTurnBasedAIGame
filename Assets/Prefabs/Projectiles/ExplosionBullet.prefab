@@ -129,7 +129,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   Stamp: 1
   StampExclude: {fileID: 0}
-  StampPaint: 2
+  StampPaint: 0
   StampShape:
     Color: {fileID: 2800000, guid: 77cee360853680f4d8a0bd8800eb022d, type: 3}
     Alpha: {fileID: 2800000, guid: fef0ca7c77c683d4da0b22b25f9ed8ad, type: 3}

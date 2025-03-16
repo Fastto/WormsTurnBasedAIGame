@@ -833,6 +833,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6216651710756867997}
     - target: {fileID: 9063106785484778471, guid: d09c96f499e264ffa8b6938aa2489165, type: 3}
+      propertyPath: m_ProjectilePrefab
+      value: 
+      objectReference: {fileID: 103696, guid: 718871638c70f6645851203c671f73ca, type: 3}
+    - target: {fileID: 9063106785484778471, guid: d09c96f499e264ffa8b6938aa2489165, type: 3}
       propertyPath: m_PowerCanBeControlled
       value: 0
       objectReference: {fileID: 0}
