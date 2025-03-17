@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Destructible2D;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,9 +21,19 @@ namespace EnvironmentControllers
         public Action<EnvironmentController> OnEscapePhaseStarted;
         public Action<EnvironmentController> OnTurnFinished;
 
+        public D2dDestructibleSprite m_Map;
+
         public virtual void Reset()
         {
         
+        }
+        
+        public virtual void RefreshMap()
+        {
+            if (m_Map != null)
+            {
+                m_Map.Rebuild();
+            }
         }
     
         public void PlaceWormRandomly(List<WormController> worms)

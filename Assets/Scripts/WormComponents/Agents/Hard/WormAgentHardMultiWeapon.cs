@@ -15,7 +15,11 @@ namespace WormComponents.Agents.Hard
         [SerializeField] private TeamSO m_EnemyTeamSettings;
         [SerializeField] private Camera m_WormsCamera;
 
-        private bool _endEpisodeRequested = false; 
+        private bool _endEpisodeRequested = false;
+
+        private int _episodesCount;
+        public int m_RefreshMapAfterEpisodes = 30;
+        
         protected void Start()
         {
             m_WormController.SetColor(m_MyTeamSettings.m_UI_Color);
@@ -97,6 +101,12 @@ namespace WormComponents.Agents.Hard
             if (_ignoreEpisodeBegin)
                 return;
 
+            _episodesCount++;
+            if (_episodesCount >= m_RefreshMapAfterEpisodes)
+            {
+                m_WormController.m_EnvironmentController.RefreshMap();
+            }
+            
             m_WormController.Reset();
             m_WormController.m_ActiveWeapon.RandomConfig();
 
