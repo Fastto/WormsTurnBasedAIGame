@@ -458,8 +458,8 @@ MonoBehaviour:
   MaxStep: 0
   m_WormController: {fileID: 6216651710756867997}
   m_Puppets: []
-  m_MyTeamSettings: {fileID: 11400000, guid: b1247225b19f04752940ec037575326b, type: 2}
-  m_EnemyTeamSettings: {fileID: 11400000, guid: 24e118ba1f1ae4c3a84f06ddf1e889ed, type: 2}
+  m_MyTeamSettings: {fileID: 11400000, guid: 5d105d73ff6454f0b83acb68695e0307, type: 2}
+  m_EnemyTeamSettings: {fileID: 11400000, guid: 7f58b00f8d4af4a66a4b46eeb4b062ad, type: 2}
   m_WormsCamera: {fileID: 4242592654217016553}
 --- !u!1 &7327180091456417305
 GameObject:
