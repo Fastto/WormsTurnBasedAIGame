@@ -35,7 +35,7 @@ namespace WormComponents.Agents.Hard
             m_Puppets[0].m_ProjectileTarget.OnTouch += damage =>
             {
                 SetReward(- (damage / m_Puppets[0].m_Health.m_StartingHealth) ); // penalty for FRIEND
-                EndEpisode();
+                StartCoroutine(EndEpisodeIn(1));
             };
 
             if (m_Puppets.Count > 0)
