@@ -17,9 +17,6 @@ namespace WormComponents.Agents.Hard
 
         private bool _endEpisodeRequested = false;
 
-        private int _episodesCount;
-        public int m_RefreshMapAfterEpisodes = 30;
-        
         protected void Start()
         {
             m_WormController.SetColor(m_MyTeamSettings.m_UI_Color);

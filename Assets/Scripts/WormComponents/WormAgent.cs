@@ -11,6 +11,9 @@ namespace WormComponents
     public class WormAgent : Agent
     {
         [SerializeField] protected WormController m_WormController;
+        public int m_RefreshMapAfterEpisodes = 50;
+        
+        protected int _episodesCount;
 
         public override void OnActionReceived(ActionBuffers actions) {
 

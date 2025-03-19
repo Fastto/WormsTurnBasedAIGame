@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2693338f58e4fb8b49de0e7f4789896, type: 3}
   m_Name: AI_2_BLUE_Team (Hard)
   m_EditorClassIdentifier: 
-  m_WormPrefab: {fileID: 5988141108363509067, guid: 9f591607f7bbf450687cb2eda4301fa8, type: 3}
+  m_WormPrefab: {fileID: 5988141108363509067, guid: eaf6ba9711c064625b3f7a096cad2eeb, type: 3}
   m_UI_Color: {r: 0, g: 0, b: 1, a: 1}
   m_Worm_Color: {r: 1, g: 1, b: 1, a: 1}
   m_PlayersQuantity: 2

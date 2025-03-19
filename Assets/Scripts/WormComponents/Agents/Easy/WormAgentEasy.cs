@@ -50,6 +50,12 @@ namespace WormComponents.Agents.Easy
             if(_ignoreEpisodeBegin)
                 return;
             
+            _episodesCount++;
+            if (_episodesCount >= m_RefreshMapAfterEpisodes)
+            {
+                m_WormController.m_EnvironmentController.RefreshMap();
+            }
+            
             m_WormController.Reset();
             m_WormController.m_ActiveWeapon.RandomConfig();
             

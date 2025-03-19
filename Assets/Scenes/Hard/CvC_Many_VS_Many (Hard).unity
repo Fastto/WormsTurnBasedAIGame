@@ -1352,9 +1352,10 @@ MonoBehaviour:
   - {fileID: 1437179966}
   - {fileID: 993545774}
   - {fileID: 1285429903}
+  m_Map: {fileID: 0}
   m_TeamsSettings:
-  - {fileID: 11400000, guid: 0596064975cd44fda9502a1ab0aeb693, type: 2}
-  - {fileID: 11400000, guid: 5c50ece69c8864863a807d6c4faa47ec, type: 2}
+  - {fileID: 11400000, guid: b1247225b19f04752940ec037575326b, type: 2}
+  - {fileID: 11400000, guid: 24e118ba1f1ae4c3a84f06ddf1e889ed, type: 2}
 --- !u!114 &8147645030288652124
 MonoBehaviour:
   m_ObjectHideFlags: 0

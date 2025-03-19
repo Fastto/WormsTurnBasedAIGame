@@ -15,6 +15,8 @@ namespace WormComponents.Agents.Hard
         
         protected void Start()
         {
+            Debug.Log(m_WormController);
+            Debug.Log(m_MyTeamSettings);
             m_WormController.SetColor(m_MyTeamSettings.m_UI_Color);
             m_WormController.ApplyLayer(m_MyTeamSettings.m_WormLayerId);
             ApplyEnemyLayers(m_MyTeamSettings.m_EnemyLayers);
@@ -70,6 +72,12 @@ namespace WormComponents.Agents.Hard
         {
             if (_ignoreEpisodeBegin)
                 return;
+            
+            _episodesCount++;
+            if (_episodesCount >= m_RefreshMapAfterEpisodes)
+            {
+                m_WormController.m_EnvironmentController.RefreshMap();
+            }
 
             m_WormController.Reset();
             m_WormController.m_ActiveWeapon.RandomConfig();
