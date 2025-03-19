@@ -38,7 +38,8 @@ namespace WormComponents.Agents.Hard
             m_Puppets[0].ApplyLayer(m_MyTeamSettings.m_WormLayerId);
             m_Puppets[0].m_ProjectileTarget.OnTouch += damage =>
             {
-                SetReward(- (damage / m_Puppets[0].m_Health.m_StartingHealth) ); // penalty for FRIEND
+                // SetReward(- (damage / m_Puppets[0].m_Health.m_StartingHealth) ); // penalty for FRIEND
+                SetReward(- 1f ); // penalty for FRIEND
                 StartCoroutine(EndEpisodeIn(1));
             };
 
@@ -59,7 +60,8 @@ namespace WormComponents.Agents.Hard
                     p.ApplyLayer(m_EnemyTeamSettings.m_WormLayerId);
                     p.m_ProjectileTarget.OnTouch += damage =>
                     {
-                        SetReward(((float)damage / (float)100f)); //  rewards for rest
+                        // SetReward(((float)damage / (float)100f)); //  rewards for rest
+                        SetReward(1f); //  rewards for rest
                         if(!_endEpisodeRequested)
                             StartCoroutine(EndEpisodeIn(1));
                     };
@@ -248,10 +250,10 @@ namespace WormComponents.Agents.Hard
                 actionMask.SetActionEnabled(3, 0, true); 
                 actionMask.SetActionEnabled(3, 1, true);
                 
-                // Weapon id
-                actionMask.SetActionEnabled(4, 0, true); 
-                actionMask.SetActionEnabled(4, 1, true);
-                actionMask.SetActionEnabled(4, 2, true);
+                // WeaponID
+                actionMask.SetActionEnabled(4, 0, m_WormController.m_ControllingSignals.m_WeaponId == 0); 
+                actionMask.SetActionEnabled(4, 1, m_WormController.m_ControllingSignals.m_WeaponId == 1);
+                actionMask.SetActionEnabled(4, 2, m_WormController.m_ControllingSignals.m_WeaponId == 2);
             } 
             else if (m_WormController.m_State.m_State == WormState.States.SHOOTING)
             {
