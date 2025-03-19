@@ -110,3 +110,6 @@ fabric/com.crashlytics.*
 
 # Rider tool specific files
 .rider/
+
+# Python virtual environment
+venv/
