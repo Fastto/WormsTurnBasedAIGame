@@ -54,6 +54,7 @@ namespace WormComponents.Agents.Easy
             if (_episodesCount >= m_RefreshMapAfterEpisodes)
             {
                 m_WormController.m_EnvironmentController.RefreshMap();
+                _episodesCount -= m_RefreshMapAfterEpisodes;
             }
             
             m_WormController.Reset();
