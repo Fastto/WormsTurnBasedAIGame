@@ -76,6 +76,7 @@ namespace WormComponents.Agents.Hard
             _episodesCount++;
             if (_episodesCount >= m_RefreshMapAfterEpisodes)
             {
+                _episodesCount -= m_RefreshMapAfterEpisodes;
                 m_WormController.m_EnvironmentController.RefreshMap();
             }
 
