@@ -1,0 +1,65 @@
+{
+    "worm_basic": {
+        "checkpoints": [
+            {
+                "steps": 42999894,
+                "file_path": "results\\EasyAll\\worm_basic\\worm_basic-42999894.onnx",
+                "reward": 0.32941176470588235,
+                "creation_time": 1743613360.3774672,
+                "auxillary_file_paths": [
+                    "results\\EasyAll\\worm_basic\\worm_basic-42999894.pt"
+                ]
+            },
+            {
+                "steps": 43499921,
+                "file_path": "results\\EasyAll\\worm_basic\\worm_basic-43499921.onnx",
+                "reward": 0.1111111111111111,
+                "creation_time": 1743614665.626192,
+                "auxillary_file_paths": [
+                    "results\\EasyAll\\worm_basic\\worm_basic-43499921.pt"
+                ]
+            },
+            {
+                "steps": 43999960,
+                "file_path": "results\\EasyAll\\worm_basic\\worm_basic-43999960.onnx",
+                "reward": 0.35964912280701755,
+                "creation_time": 1743615952.9186945,
+                "auxillary_file_paths": [
+                    "results\\EasyAll\\worm_basic\\worm_basic-43999960.pt"
+                ]
+            },
+            {
+                "steps": 44499888,
+                "file_path": "results\\EasyAll\\worm_basic\\worm_basic-44499888.onnx",
+                "reward": 0.3488372093023256,
+                "creation_time": 1743617231.1444945,
+                "auxillary_file_paths": [
+                    "results\\EasyAll\\worm_basic\\worm_basic-44499888.pt"
+                ]
+            },
+            {
+                "steps": 44716098,
+                "file_path": "results\\EasyAll\\worm_basic\\worm_basic-44716098.onnx",
+                "reward": 0.25,
+                "creation_time": 1743617775.9254603,
+                "auxillary_file_paths": [
+                    "results\\EasyAll\\worm_basic\\worm_basic-44716098.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 44716098,
+            "file_path": "results\\EasyAll\\worm_basic.onnx",
+            "reward": 0.25,
+            "creation_time": 1743617775.9254603,
+            "auxillary_file_paths": [
+                "results\\EasyAll\\worm_basic\\worm_basic-44716098.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.5.1+cu121"
+    }
+}
