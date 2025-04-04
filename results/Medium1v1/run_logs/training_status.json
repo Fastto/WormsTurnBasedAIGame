@@ -1,0 +1,65 @@
+{
+    "worm_medium": {
+        "checkpoints": [
+            {
+                "steps": 999986,
+                "file_path": "results\\Medium1v1\\worm_medium\\worm_medium-999986.onnx",
+                "reward": 0.2033898305084746,
+                "creation_time": 1743757193.510706,
+                "auxillary_file_paths": [
+                    "results\\Medium1v1\\worm_medium\\worm_medium-999986.pt"
+                ]
+            },
+            {
+                "steps": 1499873,
+                "file_path": "results\\Medium1v1\\worm_medium\\worm_medium-1499873.onnx",
+                "reward": 0.6666666666666666,
+                "creation_time": 1743774518.2157102,
+                "auxillary_file_paths": [
+                    "results\\Medium1v1\\worm_medium\\worm_medium-1499873.pt"
+                ]
+            },
+            {
+                "steps": 1881213,
+                "file_path": "results\\Medium1v1\\worm_medium\\worm_medium-1881213.onnx",
+                "reward": 0.3333333333333333,
+                "creation_time": 1743787716.9656966,
+                "auxillary_file_paths": [
+                    "results\\Medium1v1\\worm_medium\\worm_medium-1881213.pt"
+                ]
+            },
+            {
+                "steps": 1999959,
+                "file_path": "results\\Medium1v1\\worm_medium\\worm_medium-1999959.onnx",
+                "reward": 0.4032258064516129,
+                "creation_time": 1743791810.0944443,
+                "auxillary_file_paths": [
+                    "results\\Medium1v1\\worm_medium\\worm_medium-1999959.pt"
+                ]
+            },
+            {
+                "steps": 2048304,
+                "file_path": "results\\Medium1v1\\worm_medium\\worm_medium-2048304.onnx",
+                "reward": 0.0,
+                "creation_time": 1743793495.1947107,
+                "auxillary_file_paths": [
+                    "results\\Medium1v1\\worm_medium\\worm_medium-2048304.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2048304,
+            "file_path": "results\\Medium1v1\\worm_medium.onnx",
+            "reward": 0.0,
+            "creation_time": 1743793495.1947107,
+            "auxillary_file_paths": [
+                "results\\Medium1v1\\worm_medium\\worm_medium-2048304.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.5.1+cu121"
+    }
+}
