@@ -7,8 +7,6 @@ namespace EnvironmentControllers
     {
         public override void Reset()
         {
-            // starting new turn 1 frame later to avoid intersection with another logic 
-            // during the EndTimer phase within the training
             StartCoroutine(LateStart());
         }
 

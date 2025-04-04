@@ -39,7 +39,7 @@ public class Projectile : MonoBehaviour
     
     private IEnumerator SelfDestroy()
     {
-        yield return new WaitForSeconds(m_LifeTime); //todo remove hardcode
+        yield return new WaitForSeconds(m_LifeTime);
         Destroy(gameObject);
     }
 }

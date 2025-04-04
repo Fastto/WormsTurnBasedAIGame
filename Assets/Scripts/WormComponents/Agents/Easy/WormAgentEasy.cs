@@ -15,7 +15,6 @@ namespace WormComponents.Agents.Easy
         }
         
         protected  void Start(){
-            // rewarding if enemy has been damaged
             m_EnemyWormController.m_ProjectileTarget.OnTouch += damage => {
                 SetReward(1f);
                 EndEpisode();

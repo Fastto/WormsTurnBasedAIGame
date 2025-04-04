@@ -8,11 +8,7 @@ namespace EnvironmentControllers
 {
     public class EnvironmentController : MonoBehaviour
     {
-        // not UI, but in scene game timer.
-        // it is necessary to make it possible to have several environments with personal timers
         public TurnTimer m_Timer;
-        
-        // points to spawn worms
         [SerializeField] protected  List<SpawningPoint> m_SpawningPoints;
 
         // Events

@@ -92,10 +92,9 @@ public class WormController : MonoBehaviour
 
     protected void Update()
     {
-        //todo extract to component that checks is warm still on the map
         if (transform.localPosition.y < -15f)
         {
-            m_Health.m_Health = -1; //DIE
+            m_Health.m_Health = -1;
             return;
         }
         
@@ -107,7 +106,6 @@ public class WormController : MonoBehaviour
         } 
         else if (m_ControllingSignals.m_WeaponId != m_ControllingSignals.m_TargetWeaponId)
         {
-            // reset changing weapon signal if the state is not right
             m_ControllingSignals.m_TargetWeaponId = m_ControllingSignals.m_WeaponId;
         }
         else if (m_State.m_State == WormState.States.MOVING && m_ControllingSignals.m_Aim)

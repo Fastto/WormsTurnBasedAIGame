@@ -33,7 +33,6 @@ namespace EnvironmentControllers
                 int currentTeamId = 0;
                 while (!IsGameFinished())
                 {
-                    //new turn
                     currentTeamId = GetNextTeamId(currentTeamId);
                     var worm = m_Teams[currentTeamId].GetNextWorm();
                     worm.m_State.m_State = WormState.States.MOVING;
@@ -59,9 +58,6 @@ namespace EnvironmentControllers
             PlaceWormRandomly(worms);
         }
 
-        /**
-         * Game is finished when theres are no more then one teams have live worms
-         */
         protected bool IsGameFinished()
         {
             int numberOfTeamsWithActiveWorms = 0;

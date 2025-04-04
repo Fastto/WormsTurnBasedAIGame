@@ -60,20 +60,20 @@ namespace WormComponents
             {
                 // X axis
                 actionMask.SetActionEnabled(0, 0, false); 
-                actionMask.SetActionEnabled(0, 1, true); // Just stay
+                actionMask.SetActionEnabled(0, 1, true);
                 actionMask.SetActionEnabled(0, 2, false); 
                 
                 // Y axis
                 actionMask.SetActionEnabled(1, 0, false); 
-                actionMask.SetActionEnabled(1, 1, true); // Just stay
+                actionMask.SetActionEnabled(1, 1, true);
                 actionMask.SetActionEnabled(1, 2, false); 
             
                 // Jump
-                actionMask.SetActionEnabled(2, 0, true); // Just stay
+                actionMask.SetActionEnabled(2, 0, true);
                 actionMask.SetActionEnabled(2, 1, false);
 
                 // Fire
-                actionMask.SetActionEnabled(3, 0, true); // Just stay
+                actionMask.SetActionEnabled(3, 0, true);
                 actionMask.SetActionEnabled(3, 1, false);
             }
             else if (m_WormController.m_State.m_State == WormState.States.MOVING)
@@ -85,7 +85,7 @@ namespace WormComponents
                 
                 // Y axis. Not Used
                 actionMask.SetActionEnabled(1, 0, false); 
-                actionMask.SetActionEnabled(1, 1, true); // Just stay
+                actionMask.SetActionEnabled(1, 1, true);
                 actionMask.SetActionEnabled(1, 2, false); 
             
                 // Jump
@@ -105,7 +105,7 @@ namespace WormComponents
                 
                 // Y axis. Shot Power + -
                 actionMask.SetActionEnabled(1, 0, true); 
-                actionMask.SetActionEnabled(1, 1, true); // Just stay
+                actionMask.SetActionEnabled(1, 1, true);
                 actionMask.SetActionEnabled(1, 2, true); 
             
                 // Jump. Shot
@@ -125,7 +125,7 @@ namespace WormComponents
                 
                 // Y axis. Not Used
                 actionMask.SetActionEnabled(1, 0, false); 
-                actionMask.SetActionEnabled(1, 1, true); // Just stay
+                actionMask.SetActionEnabled(1, 1, true);
                 actionMask.SetActionEnabled(1, 2, false); 
             
                 // Jump
@@ -133,7 +133,7 @@ namespace WormComponents
                 actionMask.SetActionEnabled(2, 1, m_WormController.m_GroundDetector.m_IsGrounded);
 
                 // Fire. Not Used
-                actionMask.SetActionEnabled(3, 0, true); // Just stay
+                actionMask.SetActionEnabled(3, 0, true);
                 actionMask.SetActionEnabled(3, 1, false);
             }
         }
