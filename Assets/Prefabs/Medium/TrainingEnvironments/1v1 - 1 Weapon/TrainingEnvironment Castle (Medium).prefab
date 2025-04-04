@@ -718,6 +718,14 @@ PrefabInstance:
       propertyPath: 'm_Puppets.Array.data[0]'
       value: 
       objectReference: {fileID: 8431663999324002496}
+    - target: {fileID: 7397715108369214129, guid: 7c832f20b5682493e810e38cfc0612a1, type: 3}
+      propertyPath: m_enemy_Puppets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397715108369214129, guid: 7c832f20b5682493e810e38cfc0612a1, type: 3}
+      propertyPath: 'm_enemy_Puppets.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8431663999324002496}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

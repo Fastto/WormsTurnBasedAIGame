@@ -8,7 +8,8 @@ namespace WormComponents.Agents.Medium
     public class WormAgentMedium : WormAgent
     {
         protected bool _ignoreEpisodeBegin = false;
-        [SerializeField] private List<WormController> m_Puppets;
+        [SerializeField] private List<WormController> m_friendly_Puppets;
+        [SerializeField] private List<WormController> m_enemy_Puppets;
         [SerializeField] private TeamSO m_MyTeamSettings;
         [SerializeField] private TeamSO m_EnemyTeamSettings;
 
@@ -19,26 +20,26 @@ namespace WormComponents.Agents.Medium
             ApplyEnemyLayers(m_MyTeamSettings.m_EnemyLayers);
             m_WormController.m_IsSelfDestroyAllowed = false;
 
-            // We have 3 ,appets on scene
-            // 1st is friend, rest are enemies
-            // sp that we pay fine for the targeting first and rewarding for the rest
-            m_Puppets[0].m_IsSelfDestroyAllowed = false;
-            m_Puppets[0].SetColor(m_MyTeamSettings.m_UI_Color);
-            m_Puppets[0].ApplyLayer(m_MyTeamSettings.m_WormLayerId);
-            m_Puppets[0].m_ProjectileTarget.OnTouch += damage =>
+            for (int i = 0; i < m_friendly_Puppets.Count; i++)
             {
-                SetReward(-1f); // penalty for fist
-                EndEpisode();
-            };
-
-            for (int i = 1; i < m_Puppets.Count; i++)
-            {
-                m_Puppets[i].m_IsSelfDestroyAllowed = false;
-                m_Puppets[i].SetColor(m_EnemyTeamSettings.m_UI_Color);
-                m_Puppets[i].ApplyLayer(m_EnemyTeamSettings.m_WormLayerId);
-                m_Puppets[i].m_ProjectileTarget.OnTouch += damage =>
+                m_friendly_Puppets[i].m_IsSelfDestroyAllowed = false;
+                m_friendly_Puppets[i].SetColor(m_MyTeamSettings.m_UI_Color);
+                m_friendly_Puppets[i].ApplyLayer(m_MyTeamSettings.m_WormLayerId);
+                m_friendly_Puppets[i].m_ProjectileTarget.OnTouch += damage =>
                 {
-                    SetReward(1f); //  rewards for rest
+                    SetReward(-1f); //  penalty for friends
+                    EndEpisode();
+                };
+            }
+
+            for (int i = 0; i < m_enemy_Puppets.Count; i++)
+            {
+                m_enemy_Puppets[i].m_IsSelfDestroyAllowed = false;
+                m_enemy_Puppets[i].SetColor(m_EnemyTeamSettings.m_UI_Color);
+                m_enemy_Puppets[i].ApplyLayer(m_EnemyTeamSettings.m_WormLayerId);
+                m_enemy_Puppets[i].m_ProjectileTarget.OnTouch += damage =>
+                {
+                    SetReward(1f); //  rewards for enemies
                     EndEpisode();
                 };
             }
@@ -80,14 +81,20 @@ namespace WormComponents.Agents.Medium
             m_WormController.Reset();
             m_WormController.m_ActiveWeapon.RandomConfig();
 
-            foreach (var puppet in m_Puppets)
+            foreach (var puppet in m_friendly_Puppets)
+            {
+                puppet.Reset();
+            }
+
+            foreach (var puppet in m_enemy_Puppets)
             {
                 puppet.Reset();
             }
 
             var worms = new List<WormController>();
             worms.Add(m_WormController);
-            m_Puppets.ForEach(p => worms.Add(p));
+            m_friendly_Puppets.ForEach(p => worms.Add(p));
+            m_enemy_Puppets.ForEach(p => worms.Add(p));
             m_WormController.m_EnvironmentController.PlaceWormRandomly(worms);
             m_WormController.m_EnvironmentController.Reset();
         }
