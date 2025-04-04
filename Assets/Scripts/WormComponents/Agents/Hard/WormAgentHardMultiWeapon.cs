@@ -10,7 +10,8 @@ namespace WormComponents.Agents.Hard
     public class WormAgentHardMultiWeapon : WormAgent
     {
         protected bool _ignoreEpisodeBegin = false;
-        [SerializeField] private List<WormController> m_Puppets;
+        [SerializeField] private List<WormController> m_friendly_Puppets;
+        [SerializeField] private List<WormController> m_enemy_Puppets;
         [SerializeField] private TeamSO m_MyTeamSettings;
         [SerializeField] private TeamSO m_EnemyTeamSettings;
         [SerializeField] private Camera m_WormsCamera;
@@ -23,46 +24,31 @@ namespace WormComponents.Agents.Hard
             m_WormController.ApplyLayer(m_MyTeamSettings.m_WormLayerId);
             ApplyEnemyLayers(m_MyTeamSettings.m_EnemyLayers);
             m_WormController.m_IsSelfDestroyAllowed = false;
-            
-            //penalty for self death
-            m_WormController.m_Health.OnDie += () => SetReward(-1);
 
-            // We have 3 ,mappets on scene
-            // 1st is friend, rest are enemies
-            // sp that we pay fine for the targeting first and rewarding for the rest
-            m_Puppets[0].m_IsSelfDestroyAllowed = false;
-            m_Puppets[0].SetColor(m_MyTeamSettings.m_UI_Color);
-            m_Puppets[0].ApplyLayer(m_MyTeamSettings.m_WormLayerId);
-            m_Puppets[0].m_ProjectileTarget.OnTouch += damage =>
+            for (int i = 0; i < m_friendly_Puppets.Count; i++)
             {
-                // SetReward(- (damage / m_Puppets[0].m_Health.m_StartingHealth) ); // penalty for FRIEND
-                SetReward(- 1f ); // penalty for FRIEND
-                StartCoroutine(EndEpisodeIn(1));
-            };
-
-            if (m_Puppets.Count > 0)
-            {
-                var skip = true;
-                
-                m_Puppets.ForEach(p =>
+                m_friendly_Puppets[i].m_IsSelfDestroyAllowed = false;
+                m_friendly_Puppets[i].SetColor(m_MyTeamSettings.m_UI_Color);
+                m_friendly_Puppets[i].ApplyLayer(m_MyTeamSettings.m_WormLayerId);
+                m_friendly_Puppets[i].m_ProjectileTarget.OnTouch += damage =>
                 {
-                    if (skip)
-                    {
-                        skip = false;
-                        return;
-                    }
-                    
-                    p.m_IsSelfDestroyAllowed = false;
-                    p.SetColor(m_EnemyTeamSettings.m_UI_Color);
-                    p.ApplyLayer(m_EnemyTeamSettings.m_WormLayerId);
-                    p.m_ProjectileTarget.OnTouch += damage =>
-                    {
-                        // SetReward(((float)damage / (float)100f)); //  rewards for rest
-                        SetReward(1f); //  rewards for rest
-                        if(!_endEpisodeRequested)
-                            StartCoroutine(EndEpisodeIn(1));
-                    };
-                });
+                    SetReward(-1f); //  penalty for friends
+                    if(!_endEpisodeRequested)
+                        StartCoroutine(EndEpisodeIn(1));
+                };
+            }
+
+            for (int i = 0; i < m_enemy_Puppets.Count; i++)
+            {
+                m_enemy_Puppets[i].m_IsSelfDestroyAllowed = false;
+                m_enemy_Puppets[i].SetColor(m_EnemyTeamSettings.m_UI_Color);
+                m_enemy_Puppets[i].ApplyLayer(m_EnemyTeamSettings.m_WormLayerId);
+                m_enemy_Puppets[i].m_ProjectileTarget.OnTouch += damage =>
+                {
+                    SetReward(1f); //  rewards for enemies
+                    if(!_endEpisodeRequested)
+                        StartCoroutine(EndEpisodeIn(1));
+                };
             }
 
             m_WormController.m_EnvironmentController.OnTurnStarted += env =>
@@ -110,14 +96,20 @@ namespace WormComponents.Agents.Hard
             m_WormController.Reset();
             m_WormController.m_ActiveWeapon.RandomConfig();
 
-            foreach (var puppet in m_Puppets)
+            foreach (var puppet in m_friendly_Puppets)
+            {
+                puppet.Reset();
+            }
+
+            foreach (var puppet in m_enemy_Puppets)
             {
                 puppet.Reset();
             }
 
             var worms = new List<WormController>();
             worms.Add(m_WormController);
-            m_Puppets.ForEach(p => worms.Add(p));
+            m_friendly_Puppets.ForEach(p => worms.Add(p));
+            m_enemy_Puppets.ForEach(p => worms.Add(p));
             m_WormController.m_EnvironmentController.PlaceWormRandomly(worms);
             m_WormController.m_EnvironmentController.Reset();
         }
