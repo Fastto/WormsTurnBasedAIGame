@@ -2,58 +2,58 @@
     "worm_hard_multiweapon": {
         "checkpoints": [
             {
-                "steps": 34999964,
-                "file_path": "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-34999964.onnx",
-                "reward": 0.4444444444444444,
-                "creation_time": 1744160396.074602,
+                "steps": 39499996,
+                "file_path": "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-39499996.onnx",
+                "reward": 0.5142857142857142,
+                "creation_time": 1744205668.3608043,
                 "auxillary_file_paths": [
-                    "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-34999964.pt"
+                    "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-39499996.pt"
                 ]
             },
             {
-                "steps": 35499970,
-                "file_path": "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-35499970.onnx",
-                "reward": 0.4892703862660944,
-                "creation_time": 1744165519.551927,
+                "steps": 39999954,
+                "file_path": "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-39999954.onnx",
+                "reward": 0.5039370078740157,
+                "creation_time": 1744210330.7089705,
                 "auxillary_file_paths": [
-                    "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-35499970.pt"
+                    "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-39999954.pt"
                 ]
             },
             {
-                "steps": 35999994,
-                "file_path": "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-35999994.onnx",
-                "reward": 0.45588235294117646,
-                "creation_time": 1744170557.2355413,
+                "steps": 40499984,
+                "file_path": "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-40499984.onnx",
+                "reward": 0.631578947368421,
+                "creation_time": 1744215175.1148305,
                 "auxillary_file_paths": [
-                    "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-35999994.pt"
+                    "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-40499984.pt"
                 ]
             },
             {
-                "steps": 36499989,
-                "file_path": "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-36499989.onnx",
-                "reward": 0.463768115942029,
-                "creation_time": 1744175603.0030754,
+                "steps": 40999963,
+                "file_path": "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-40999963.onnx",
+                "reward": 0.5,
+                "creation_time": 1744220510.6758976,
                 "auxillary_file_paths": [
-                    "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-36499989.pt"
+                    "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-40999963.pt"
                 ]
             },
             {
-                "steps": 36930596,
-                "file_path": "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-36930596.onnx",
-                "reward": 0.44,
-                "creation_time": 1744179949.5875463,
+                "steps": 41049650,
+                "file_path": "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-41049650.onnx",
+                "reward": 0.5341614906832298,
+                "creation_time": 1744221057.9248002,
                 "auxillary_file_paths": [
-                    "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-36930596.pt"
+                    "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-41049650.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 36930596,
+            "steps": 41049650,
             "file_path": "results\\Hard1v1\\worm_hard_multiweapon.onnx",
-            "reward": 0.44,
-            "creation_time": 1744179949.5875463,
+            "reward": 0.5341614906832298,
+            "creation_time": 1744221057.9248002,
             "auxillary_file_paths": [
-                "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-36930596.pt"
+                "results\\Hard1v1\\worm_hard_multiweapon\\worm_hard_multiweapon-41049650.pt"
             ]
         }
     },
