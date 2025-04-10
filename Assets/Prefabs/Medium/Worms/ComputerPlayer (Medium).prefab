@@ -343,6 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ProjectilePrefab: {fileID: 5753890420319312002, guid: 8d5ef05cbfe3a4596a3facaeff23d316, type: 3}
   m_LaunchPoint: {fileID: 2442779244484658117}
+  m_LaunchPoints: []
   m_WormController: {fileID: 6216651710756867997}
   m_AimSprite: {fileID: 6324173889302229888}
   m_MinScale: 1
@@ -471,7 +472,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 693a11835de6e40049b1569fa9378d54, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 6c010f589033dbc41bacfc2142c77158, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: worm_medium
@@ -634,7 +635,9 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   m_WormController: {fileID: 6216651710756867997}
-  m_Puppets: []
+  m_RefreshMapAfterEpisodes: 50
+  m_friendly_Puppets: []
+  m_enemy_Puppets: []
   m_MyTeamSettings: {fileID: 0}
   m_EnemyTeamSettings: {fileID: 0}
 --- !u!1 &6324173889302229888

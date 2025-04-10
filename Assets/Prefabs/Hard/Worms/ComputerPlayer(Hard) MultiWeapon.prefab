@@ -303,7 +303,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 9a8713f5880b349d7b091d0bf84daf94, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 710096951bee1aa4f8b867daeb7f7673, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: worm_hard_multiweapon
@@ -458,7 +458,8 @@ MonoBehaviour:
   MaxStep: 0
   m_WormController: {fileID: 6216651710756867997}
   m_RefreshMapAfterEpisodes: 50
-  m_Puppets: []
+  m_friendly_Puppets: []
+  m_enemy_Puppets: []
   m_MyTeamSettings: {fileID: 0}
   m_EnemyTeamSettings: {fileID: 0}
   m_WormsCamera: {fileID: 4242592654217016553}
@@ -1045,7 +1046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3060953298335934854, guid: a986d89fee1fd4174aaf8746535296a5, type: 3}
       propertyPath: m_Name
-      value: LazerGun
+      value: LaserGun
       objectReference: {fileID: 0}
     - target: {fileID: 3060953298335934854, guid: a986d89fee1fd4174aaf8746535296a5, type: 3}
       propertyPath: m_IsActive

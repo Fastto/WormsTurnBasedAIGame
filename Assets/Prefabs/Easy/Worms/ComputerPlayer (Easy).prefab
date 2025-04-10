@@ -386,7 +386,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 7fbcdf305fba04219baef3b8f7d4ee9e, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 06ea4984586acab4083b864fcbcb23a8, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: worm_basic
@@ -500,6 +500,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   m_WormController: {fileID: 7933565558170052105}
+  m_RefreshMapAfterEpisodes: 50
   m_EnemyWormController: {fileID: 0}
 --- !u!1 &3033301415381545184
 GameObject:
@@ -758,6 +759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ProjectilePrefab: {fileID: 5753890420319312002, guid: 8d5ef05cbfe3a4596a3facaeff23d316, type: 3}
   m_LaunchPoint: {fileID: 6039546809037238643}
+  m_LaunchPoints: []
   m_WormController: {fileID: 7933565558170052105}
   m_AimSprite: {fileID: 2742839542611274265}
   m_MinScale: 1

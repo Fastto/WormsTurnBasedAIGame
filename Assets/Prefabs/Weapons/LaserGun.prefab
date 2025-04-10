@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 1951375773183419757}
   - component: {fileID: 478626490778684635}
   m_Layer: 8
-  m_Name: LazerGun
+  m_Name: LaserGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,6 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ProjectilePrefab: {fileID: 103696, guid: a44d43e93598c2d428112d389ee8082d, type: 3}
   m_LaunchPoint: {fileID: 3996662839135782301}
+  m_LaunchPoints: []
   m_WormController: {fileID: 0}
   m_AimSprite: {fileID: 5860278018022953176}
   m_MinScale: 1

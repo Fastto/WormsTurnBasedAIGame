@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7038896582867071240}
   - component: {fileID: 6831298805842950884}
   m_Layer: 7
-  m_Name: ProjectileSprite
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,8 +147,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8050232909129296880}
-  - component: {fileID: 5435899106910176075}
   - component: {fileID: 5244726425750052903}
+  - component: {fileID: 5435899106910176075}
   - component: {fileID: 977568747562498939}
   - component: {fileID: 8731495876042725827}
   m_Layer: 7
@@ -174,18 +174,6 @@ Transform:
   - {fileID: 2753411061307373244}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5435899106910176075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5753890420319312002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f00e09206cc634b14b2f365e677c88d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &5244726425750052903
 Rigidbody2D:
   serializedVersion: 4
@@ -213,6 +201,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5435899106910176075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5753890420319312002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f00e09206cc634b14b2f365e677c88d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Damage: 34
+  m_LifeTime: 5
 --- !u!114 &977568747562498939
 MonoBehaviour:
   m_ObjectHideFlags: 0

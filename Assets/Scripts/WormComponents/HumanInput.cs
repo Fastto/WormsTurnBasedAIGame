@@ -23,7 +23,7 @@ namespace WormComponents
             case WormState.States.SHOOTING:
                m_WormController.m_ControllingSignals.m_Aimning = xAxis;
                m_WormController.m_ControllingSignals.m_PowerChanging = yAxis;
-               // m_WormController.m_ControllingSignals.m_AimCancel = jumpButton == 1;
+               // m_WormController.m_ControllingSignals.m_AimCancel = cancelButton;
                m_WormController.m_ControllingSignals.m_Fire = jumpButton;
                break;
             case WormState.States.ESCAPING:

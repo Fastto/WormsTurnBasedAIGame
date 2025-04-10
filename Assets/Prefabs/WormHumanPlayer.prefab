@@ -345,7 +345,9 @@ MonoBehaviour:
   m_JumpSpeed: 4
   m_EnvironmentController: {fileID: 0}
   m_GroundDetector: {fileID: 863031447093692707}
-  m_Weapon: {fileID: 6444461649183033419}
+  m_ActiveWeapon: {fileID: 0}
+  m_Weapons:
+  - {fileID: 6444461649183033419}
   m_State: {fileID: 8279901548725598071}
   m_ControllingSignals: {fileID: 8224857125682988670}
   m_RigidBody: {fileID: 8041749938684323381}
@@ -413,6 +415,8 @@ MonoBehaviour:
   m_Fire: 0
   m_Aimning: 0
   m_PowerChanging: 0
+  m_WeaponId: 0
+  m_TargetWeaponId: 0
   m_SetPower: 0
   m_SetAim: {x: 0, y: 0}
 --- !u!114 &4216043611412396091
@@ -698,10 +702,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ProjectilePrefab: {fileID: 5753890420319312002, guid: 8d5ef05cbfe3a4596a3facaeff23d316, type: 3}
   m_LaunchPoint: {fileID: 6039546809037238643}
+  m_LaunchPoints: []
   m_WormController: {fileID: 7933565558170052105}
   m_AimSprite: {fileID: 2742839542611274265}
   m_MinScale: 1
   m_MaxScale: 3
+  m_PowerCanBeControlled: 1
 --- !u!1001 &8821987701738701617
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -457,7 +457,9 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   m_WormController: {fileID: 6216651710756867997}
-  m_Puppets: []
+  m_RefreshMapAfterEpisodes: 50
+  m_friendly_Puppets: []
+  m_enemy_Puppets: []
   m_MyTeamSettings: {fileID: 11400000, guid: 5d105d73ff6454f0b83acb68695e0307, type: 2}
   m_EnemyTeamSettings: {fileID: 11400000, guid: 7f58b00f8d4af4a66a4b46eeb4b062ad, type: 2}
   m_WormsCamera: {fileID: 4242592654217016553}
@@ -1044,7 +1046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3060953298335934854, guid: a986d89fee1fd4174aaf8746535296a5, type: 3}
       propertyPath: m_Name
-      value: LazerGun
+      value: LaserGun
       objectReference: {fileID: 0}
     - target: {fileID: 3060953298335934854, guid: a986d89fee1fd4174aaf8746535296a5, type: 3}
       propertyPath: m_IsActive
