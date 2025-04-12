@@ -160,7 +160,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 2641698482785147981, guid: 40927627f19bc435c8ad5a386f14e70b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_AimSprite: {fileID: 5860278018022953176}
   m_MinScale: 1
   m_MaxScale: 3
-  m_PowerCanBeControlled: 1
+  m_PowerCanBeControlled: 0
 --- !u!1 &5860278018022953176
 GameObject:
   m_ObjectHideFlags: 0

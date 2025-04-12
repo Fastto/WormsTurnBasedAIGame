@@ -316,7 +316,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 2641698482785147981, guid: 40927627f19bc435c8ad5a386f14e70b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e7a8df5765442f8a0f3ee2fd5cc3a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ProjectilePrefab: {fileID: 5753890420319312002, guid: 8d5ef05cbfe3a4596a3facaeff23d316, type: 3}
+  m_ProjectilePrefab: {fileID: 103696, guid: 718871638c70f6645851203c671f73ca, type: 3}
   m_LaunchPoint: {fileID: 3749049990715692627}
   m_LaunchPoints:
   - {fileID: 100840375155418477}
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_AimSprite: {fileID: 5968445463616292778}
   m_MinScale: 1
   m_MaxScale: 3
-  m_PowerCanBeControlled: 1
+  m_PowerCanBeControlled: 0
 --- !u!1 &8309612076024065441
 GameObject:
   m_ObjectHideFlags: 0
