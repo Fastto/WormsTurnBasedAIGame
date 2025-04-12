@@ -834,14 +834,6 @@ PrefabInstance:
       propertyPath: m_WormController
       value: 
       objectReference: {fileID: 6216651710756867997}
-    - target: {fileID: 9063106785484778471, guid: d09c96f499e264ffa8b6938aa2489165, type: 3}
-      propertyPath: m_ProjectilePrefab
-      value: 
-      objectReference: {fileID: 103696, guid: 718871638c70f6645851203c671f73ca, type: 3}
-    - target: {fileID: 9063106785484778471, guid: d09c96f499e264ffa8b6938aa2489165, type: 3}
-      propertyPath: m_PowerCanBeControlled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1000,10 +992,6 @@ PrefabInstance:
       propertyPath: m_WormController
       value: 
       objectReference: {fileID: 6216651710756867997}
-    - target: {fileID: 478626490778684635, guid: a986d89fee1fd4174aaf8746535296a5, type: 3}
-      propertyPath: m_PowerCanBeControlled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1951375773183419757, guid: a986d89fee1fd4174aaf8746535296a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

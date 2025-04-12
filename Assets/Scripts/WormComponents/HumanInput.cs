@@ -10,9 +10,9 @@ namespace WormComponents
       {
          var xAxis = Input.GetAxis("Horizontal") > 0f ? 1 : Input.GetAxis("Horizontal") < 0f ? -1 : 0;
          var yAxis = Input.GetAxis("Vertical") > 0f ? 1 : Input.GetAxis("Vertical") < 0f ? -1 : 0; 
-         var jumpButton = Input.GetButton("Jump"); 
-         var fireButton = Input.GetButton("Fire1");
-         var cancelButton = Input.GetButton("Fire2");
+         var jumpButton = Input.GetButtonDown("Jump"); 
+         var fireButton = Input.GetButtonDown("Fire1");
+         var cancelButton = Input.GetButtonDown("Fire2");
 
          switch (m_WormController.m_State.m_State)
          {

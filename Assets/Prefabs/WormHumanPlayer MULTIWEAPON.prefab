@@ -430,6 +430,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1204057249535567025}
     m_Modifications:
+    - target: {fileID: 478626490778684635, guid: a986d89fee1fd4174aaf8746535296a5, type: 3}
+      propertyPath: m_WormController
+      value: 
+      objectReference: {fileID: 7933565558170052105}
     - target: {fileID: 1951375773183419757, guid: a986d89fee1fd4174aaf8746535296a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -555,6 +559,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9063106785484778471, guid: d09c96f499e264ffa8b6938aa2489165, type: 3}
+      propertyPath: m_WormController
+      value: 
+      objectReference: {fileID: 7933565558170052105}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -588,6 +596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RocketLauncher
       objectReference: {fileID: 0}
+    - target: {fileID: 2026375775640052056, guid: eec1d864c317c4a3597c4d9996666eca, type: 3}
+      propertyPath: m_WormController
+      value: 
+      objectReference: {fileID: 7933565558170052105}
     - target: {fileID: 3579756929327702402, guid: eec1d864c317c4a3597c4d9996666eca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

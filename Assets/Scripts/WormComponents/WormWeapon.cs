@@ -31,7 +31,7 @@ namespace WormComponents
         private void Start()
         {
             m_AimSprite.SetActive(false);
-            m_WormController.m_State.OnChange +=state =>
+            m_WormController.m_State.OnChange += state =>
             {
                 RefreshAim();
             };

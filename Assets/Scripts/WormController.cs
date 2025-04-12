@@ -112,6 +112,7 @@ public class WormController : MonoBehaviour
         {
             m_State.m_State = WormState.States.SHOOTING;
             m_ControllingSignals.m_Aim = false;
+            return;
         } 
         else if (m_State.m_State is WormState.States.MOVING or WormState.States.ESCAPING)
         {

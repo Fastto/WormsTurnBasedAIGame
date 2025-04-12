@@ -430,6 +430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RocketLauncher
       objectReference: {fileID: 0}
+    - target: {fileID: 2026375775640052056, guid: eec1d864c317c4a3597c4d9996666eca, type: 3}
+      propertyPath: m_WormController
+      value: 
+      objectReference: {fileID: 7933565558170052105}
     - target: {fileID: 3579756929327702402, guid: eec1d864c317c4a3597c4d9996666eca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

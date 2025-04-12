@@ -1,4 +1,0 @@
-- random rotate on brgin
-- fireing
-- healthbar of worm
-- healing on the begin
