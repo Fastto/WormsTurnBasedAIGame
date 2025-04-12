@@ -9,11 +9,6 @@ namespace WormComponents.Agents.Easy
         protected bool _ignoreEpisodeBegin = false;
         [SerializeField] protected WormController m_EnemyWormController;
         
-        public void SetEnemy(WormController worm)
-        {
-            m_EnemyWormController = worm;
-        }
-        
         protected  void Start(){
             m_EnemyWormController.m_ProjectileTarget.OnTouch += damage => {
                 SetReward(1f);
@@ -108,7 +103,11 @@ namespace WormComponents.Agents.Easy
                     sensor.AddObservation(0);
                 }
             }
-
+        }
+        
+        public void SetEnemy(WormController worm)
+        {
+            m_EnemyWormController = worm;
         }
     }
 }

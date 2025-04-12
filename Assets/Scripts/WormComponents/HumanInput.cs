@@ -12,6 +12,7 @@ namespace WormComponents
          var yAxis = Input.GetAxis("Vertical") > 0f ? 1 : Input.GetAxis("Vertical") < 0f ? -1 : 0; 
          var jumpButton = Input.GetButton("Jump"); 
          var fireButton = Input.GetButton("Fire1");
+         var cancelButton = Input.GetButton("Fire2");
 
          switch (m_WormController.m_State.m_State)
          {
@@ -23,8 +24,8 @@ namespace WormComponents
             case WormState.States.SHOOTING:
                m_WormController.m_ControllingSignals.m_Aimning = xAxis;
                m_WormController.m_ControllingSignals.m_PowerChanging = yAxis;
-               // m_WormController.m_ControllingSignals.m_AimCancel = cancelButton;
-               m_WormController.m_ControllingSignals.m_Fire = jumpButton;
+               m_WormController.m_ControllingSignals.m_AimCancel = cancelButton;
+               m_WormController.m_ControllingSignals.m_Fire = fireButton;
                break;
             case WormState.States.ESCAPING:
                m_WormController.m_ControllingSignals.m_HorizontalMoving = xAxis;

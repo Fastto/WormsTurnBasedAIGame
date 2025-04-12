@@ -60,7 +60,7 @@ public class WormController : MonoBehaviour
     public void SetWeapon(int id)
     {
         if (m_Weapons.Count == 0) 
-            throw new Exception("No Weapons Configured for Worn");
+            throw new Exception("No weapons configured for Worm");
         
         if(id > m_Weapons.Count - 1)
             return;
@@ -175,6 +175,6 @@ public class WormController : MonoBehaviour
     
     public Color GetColor()
     {
-        return m_SpriteRenderer.color;
+        return m_HealthBar.m_Text.color;
     }
 }

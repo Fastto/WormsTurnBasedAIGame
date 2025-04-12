@@ -1,5 +1,9 @@
 using Unity.MLAgents;
 using Util;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace WormComponents.Agents.Easy
 {
@@ -8,6 +12,7 @@ namespace WormComponents.Agents.Easy
         private new void Start()
         {
             _ignoreEpisodeBegin = true;
+            StartCoroutine(AssignEnemyWhenReady());
             
             m_WormController.m_State.OnChange += state =>
             {
@@ -21,6 +26,12 @@ namespace WormComponents.Agents.Easy
                     GetComponent<DecisionRequester>().enabled = true;
                 }
             };
+        }
+
+        private IEnumerator AssignEnemyWhenReady()
+        {
+            yield return new WaitForSeconds(0.1f);
+            SetEnemy(RandomEnemy.GetRandomEnemy(m_WormController.GetColor()));
         }
     }
 }
