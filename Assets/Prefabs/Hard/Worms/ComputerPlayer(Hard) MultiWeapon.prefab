@@ -457,7 +457,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   m_WormController: {fileID: 6216651710756867997}
-  m_RefreshMapAfterEpisodes: 50
+  m_RefreshMapAfterEpisodes: 9999
   m_friendly_Puppets: []
   m_enemy_Puppets: []
   m_MyTeamSettings: {fileID: 0}

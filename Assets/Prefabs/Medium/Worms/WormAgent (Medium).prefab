@@ -343,6 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ProjectilePrefab: {fileID: 5753890420319312002, guid: 8d5ef05cbfe3a4596a3facaeff23d316, type: 3}
   m_LaunchPoint: {fileID: 2442779244484658117}
+  m_LaunchPoints: []
   m_WormController: {fileID: 6216651710756867997}
   m_AimSprite: {fileID: 6324173889302229888}
   m_MinScale: 1
@@ -366,9 +367,9 @@ GameObject:
   - component: {fileID: 2100489459914815915}
   - component: {fileID: 7423694637647717618}
   - component: {fileID: 1626254509964428976}
-  - component: {fileID: 7397715108369214129}
   - component: {fileID: 2692673358247371791}
   - component: {fileID: 657831526102907674}
+  - component: {fileID: 7397715108369214129}
   m_Layer: 8
   m_Name: WormAgent (Medium)
   m_TagString: Worm
@@ -568,26 +569,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_StartingHealth: 100
---- !u!114 &7397715108369214129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5988141108363509067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10e813943541c435a966c94dcf9a8a62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
-  m_WormController: {fileID: 6216651710756867997}
-  m_Puppets: []
-  m_MyTeamSettings: {fileID: 0}
-  m_EnemyTeamSettings: {fileID: 0}
 --- !u!114 &2692673358247371791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,6 +618,28 @@ MonoBehaviour:
   m_ObservationStacks: 1
   rayHitColor: {r: 1, g: 0, b: 0, a: 1}
   rayMissColor: {r: 0, g: 1, b: 0, a: 1}
+--- !u!114 &7397715108369214129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5988141108363509067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e813943541c435a966c94dcf9a8a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  m_WormController: {fileID: 6216651710756867997}
+  m_RefreshMapAfterEpisodes: 50
+  m_friendly_Puppets: []
+  m_enemy_Puppets: []
+  m_MyTeamSettings: {fileID: 0}
+  m_EnemyTeamSettings: {fileID: 0}
 --- !u!1 &6324173889302229888
 GameObject:
   m_ObjectHideFlags: 0
