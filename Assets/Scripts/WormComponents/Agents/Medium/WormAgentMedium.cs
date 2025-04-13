@@ -125,11 +125,20 @@ namespace WormComponents.Agents.Medium
             {
                 if (sensor.RaySensor.GetName() == "EnemySensor") 
                 {
-                    Debug.Log(sensor.name + " " + sensor.RaySensor.GetName());
                     sensor.RayLayerMask = lm;
                     break;
                 }
             }
+        }
+        
+        public void SetPlayEnemies(List<WormController> friends, List<WormController> enemies)
+        {
+            m_friendly_Puppets = friends;
+            m_enemy_Puppets = enemies;
+
+            m_WormController.SetColor(m_MyTeamSettings.m_UI_Color);
+            m_WormController.ApplyLayer(m_MyTeamSettings.m_WormLayerId);
+            ApplyEnemyLayers(m_MyTeamSettings.m_EnemyLayers);
         }
     }
 }

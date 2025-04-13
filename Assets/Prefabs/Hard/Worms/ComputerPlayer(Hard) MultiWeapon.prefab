@@ -460,8 +460,8 @@ MonoBehaviour:
   m_RefreshMapAfterEpisodes: 9999
   m_friendly_Puppets: []
   m_enemy_Puppets: []
-  m_MyTeamSettings: {fileID: 0}
-  m_EnemyTeamSettings: {fileID: 0}
+  m_MyTeamSettings: {fileID: 11400000, guid: ed26822505213d54a949de0cf6cac584, type: 2}
+  m_EnemyTeamSettings: {fileID: 11400000, guid: 6ade3fbf97cc02846abdfa090832a3a6, type: 2}
   m_WormsCamera: {fileID: 4242592654217016553}
 --- !u!1 &7327180091456417305
 GameObject:
