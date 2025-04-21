@@ -1,5 +1,5 @@
 behaviors:
-  worm_basic:
+  worm_easy:
     trainer_type: ppo
     hyperparameters:
       batch_size: 1024                # Number of experiences used for each iteration of gradient descent.
