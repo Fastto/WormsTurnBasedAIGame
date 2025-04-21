@@ -15,8 +15,8 @@ MonoBehaviour:
   m_WormPrefab: {fileID: 2838947000859742633, guid: 5fc96b3859d8466408dd162fb79a48e8, type: 3}
   m_UI_Color: {r: 0, g: 0, b: 1, a: 1}
   m_Worm_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_PlayersQuantity: 1
+  m_PlayersQuantity: 2
   m_WormLayerId: 13
   m_EnemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 22528
