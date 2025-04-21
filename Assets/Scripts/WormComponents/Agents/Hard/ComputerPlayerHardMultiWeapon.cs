@@ -13,7 +13,6 @@ namespace WormComponents.Agents.Hard
         private new void Start()
         {
             _ignoreEpisodeBegin = true;
-            StartCoroutine(AssignEnemyWhenReady());
             
             m_WormController.m_State.OnChange += state =>
             {
@@ -23,16 +22,9 @@ namespace WormComponents.Agents.Hard
                 }
                 else if (state == WormState.States.MOVING)
                 {
-                    SetPlayEnemies(RandomEnemy.GetAllFriends(m_WormController), RandomEnemy.GetAllEnemies(m_WormController));
                     GetComponent<DecisionRequester>().enabled = true;
                 }
             };
-        }
-
-        private IEnumerator AssignEnemyWhenReady()
-        {
-            yield return new WaitForSeconds(0.1f);
-            SetPlayEnemies(RandomEnemy.GetAllFriends(m_WormController), RandomEnemy.GetAllEnemies(m_WormController));
         }
     }
 }

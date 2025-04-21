@@ -43,8 +43,13 @@ namespace EnvironmentControllers
                     }
                     OnTurnFinished?.Invoke(this);
                 }
+
+                #if UNITY_EDITOR
+                    UnityEditor.EditorApplication.isPlaying = false;
+                #else
+                    Application.Quit();
+                #endif
             }
-            
         }
         
         public override void Reset()

@@ -248,92 +248,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &696640841
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8141358892723911251}
-    m_Modifications:
-    - target: {fileID: 874670671218480559, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: clonedSprite
-      value: 
-      objectReference: {fileID: 1922762964}
-    - target: {fileID: 5257743952239248054, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_Name
-      value: Landscape Castle
-      objectReference: {fileID: 0}
-    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8163658627243510292, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1922762964}
-    - target: {fileID: 8163658627243510292, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e31b171480711dd4387d41dab834cb47, type: 3}
---- !u!4 &696640842 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-  m_PrefabInstance: {fileID: 696640841}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &696640843 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 874670671218480559, guid: e31b171480711dd4387d41dab834cb47, type: 3}
-  m_PrefabInstance: {fileID: 696640841}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69becd2aeff25864a9ca1236ca6ee574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!213 &709808892
+--- !u!213 &640032489
 Sprite:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -872,6 +787,91 @@ Sprite:
   m_Bones: []
   m_ScriptableObjects: []
   m_SpriteID: ee40c6fb01f1442a0800000000000000
+--- !u!1001 &696640841
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8141358892723911251}
+    m_Modifications:
+    - target: {fileID: 874670671218480559, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: clonedSprite
+      value: 
+      objectReference: {fileID: 1922762964}
+    - target: {fileID: 5257743952239248054, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_Name
+      value: Landscape Castle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8163658627243510292, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1922762964}
+    - target: {fileID: 8163658627243510292, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+--- !u!4 &696640842 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6095062076437078024, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+  m_PrefabInstance: {fileID: 696640841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &696640843 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 874670671218480559, guid: e31b171480711dd4387d41dab834cb47, type: 3}
+  m_PrefabInstance: {fileID: 696640841}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69becd2aeff25864a9ca1236ca6ee574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &828230179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,8 +1945,8 @@ MonoBehaviour:
   - {fileID: 1452949214}
   m_Map: {fileID: 696640843}
   m_TeamsSettings:
-  - {fileID: 11400000, guid: e6d64d8fe81a50d49b6313a43a4e788d, type: 2}
-  - {fileID: 11400000, guid: 04554415572fac94cb86017a03384c43, type: 2}
+  - {fileID: 11400000, guid: c84e406cc9dc75d4c836b6e5d5219d8f, type: 2}
+  - {fileID: 11400000, guid: 90c7bf414e409a841b7a20e574f5ffd9, type: 2}
 --- !u!114 &8147645030288652124
 MonoBehaviour:
   m_ObjectHideFlags: 0
