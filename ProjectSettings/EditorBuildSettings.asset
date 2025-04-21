@@ -5,8 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Easy/__TRAINING_SCENE (Easy).unity
+  - enabled: 0
+    path: Assets/Scenes/Easy/__TRAINING_SCENE (Easy) Castle.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Training/__TRAINING_SCENE_1_VS_1 (Hard) Castle.unity
+    guid: 6b6bedd5f4efc00448d88760ac5fc1a2
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

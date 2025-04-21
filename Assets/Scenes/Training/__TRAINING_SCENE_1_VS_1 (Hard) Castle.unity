@@ -814,6 +814,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8029750733970227141, guid: 8a825ac02c961ce42be0ac4ae05441c1, type: 3}
+      propertyPath: m_MyTeamSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 8dc0952d07085d74484920bf88dfaa9d, type: 2}
+    - target: {fileID: 8029750733970227141, guid: 8a825ac02c961ce42be0ac4ae05441c1, type: 3}
+      propertyPath: m_EnemyTeamSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 896fb0bbfe0527a4d928a418b001e222, type: 2}
     - target: {fileID: 8237863280481841344, guid: 8a825ac02c961ce42be0ac4ae05441c1, type: 3}
       propertyPath: m_Name
       value: TrainingEnvironment Castle (Hard)
@@ -827,7 +835,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a825ac02c961ce42be0ac4ae05441c1, type: 3}
---- !u!213 &1930865458
+--- !u!213 &1840536456
 Sprite:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
