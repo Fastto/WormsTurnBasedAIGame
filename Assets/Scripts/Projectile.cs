@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Destructible2D;
+using WormComponents;
 
 public class Projectile : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class Projectile : MonoBehaviour
     public int m_Damage = 34;
 
     public float m_LifeTime = 5f;
+    
+    private bool hitDestructible = false;
 
     private void Start()
     {
@@ -20,9 +24,27 @@ public class Projectile : MonoBehaviour
         return m_Damage;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<ProjectileTarget>() != null)
+            return;
+
+        if (collision.gameObject.GetComponent<D2dCollider>() != null)
+        {
+            hitDestructible = true;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D other)
     {
-        Destroy(gameObject);
+        if (hitDestructible && other.gameObject.GetComponent<D2dCollider>() != null)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void Launch(Vector2 velocity)

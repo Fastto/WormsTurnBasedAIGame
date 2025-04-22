@@ -666,6 +666,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1807036072119939735, guid: 2a164e944a52b384d89fdd73d53dff1f, type: 3}
+      propertyPath: m_RayLayerMask.m_Bits
+      value: 22528
+      objectReference: {fileID: 0}
     - target: {fileID: 2943179628533323015, guid: 2a164e944a52b384d89fdd73d53dff1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -725,20 +729,35 @@ PrefabInstance:
     - target: {fileID: 8546426093791290172, guid: 2a164e944a52b384d89fdd73d53dff1f, type: 3}
       propertyPath: m_MyTeamSettings
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: c84e406cc9dc75d4c836b6e5d5219d8f, type: 2}
     - target: {fileID: 8546426093791290172, guid: 2a164e944a52b384d89fdd73d53dff1f, type: 3}
       propertyPath: m_EnemyTeamSettings
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 90c7bf414e409a841b7a20e574f5ffd9, type: 2}
     - target: {fileID: 8546426093791290172, guid: 2a164e944a52b384d89fdd73d53dff1f, type: 3}
       propertyPath: m_enemy_Puppets.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8546426093791290172, guid: 2a164e944a52b384d89fdd73d53dff1f, type: 3}
+      propertyPath: 'm_enemy_Puppets.Array.data[0]'
+      value: 
+      objectReference: {fileID: 513939449}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a164e944a52b384d89fdd73d53dff1f, type: 3}
+--- !u!114 &513939449 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8431663999324002496, guid: 2a164e944a52b384d89fdd73d53dff1f, type: 3}
+  m_PrefabInstance: {fileID: 513939448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22eaa1a161d284b19b56742551380f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +850,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!213 &654015907
+--- !u!213 &1452365943
 Sprite:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
