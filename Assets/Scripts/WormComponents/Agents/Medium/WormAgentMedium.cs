@@ -105,7 +105,7 @@ namespace WormComponents.Agents.Medium
             sensor.AddObservation(m_WormController.m_EnvironmentController.m_Timer.m_TimeLeft
                                   / m_WormController.m_EnvironmentController.m_Timer
                                       .m_TurnLength); // time to end of the phase
-            sensor.AddObservation((int)m_WormController.m_State.m_State); // current phase
+
             sensor.AddObservation(m_WormController.m_ActiveWeapon.transform.right); // weapon direction
             sensor.AddObservation(m_WormController.m_ActiveWeapon.m_Power); // weapon force
             sensor.AddObservation(m_WormController.m_GroundDetector.m_IsGrounded); // Is Grounded
@@ -116,6 +116,16 @@ namespace WormComponents.Agents.Medium
                 sensor.AddObservation(((Vector2)m_WormController.transform.position - point).magnitude);
                 sensor.AddObservation(((Vector2)m_WormController.transform.position - point).normalized);
                 Debug.DrawLine(m_WormController.m_ActiveWeapon.m_LaunchPoint.position, point);
+            }
+            
+            sensor.AddObservation(m_WormController.m_State.m_State == WormState.States.IDLE); 
+            sensor.AddObservation(m_WormController.m_State.m_State == WormState.States.MOVING); 
+            sensor.AddObservation(m_WormController.m_State.m_State == WormState.States.SHOOTING); 
+            sensor.AddObservation(m_WormController.m_State.m_State == WormState.States.ESCAPING); 
+            
+            for (int i = 0; i < m_WormController.m_Weapons.Count; i++)
+            {
+                sensor.AddObservation(i == m_WormController.m_ControllingSignals.m_WeaponId);
             }
         }
         

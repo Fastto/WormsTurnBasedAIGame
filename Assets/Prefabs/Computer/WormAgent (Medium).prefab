@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 67
+    VectorObservationSize: 73
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -332,8 +332,8 @@ MonoBehaviour:
   - Ground
   m_RaysPerDirection: 9
   m_MaxRayDegrees: 180
-  m_SphereCastRadius: 0.5
-  m_RayLength: 32
+  m_SphereCastRadius: 0
+  m_RayLength: 10
   m_RayLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -356,8 +356,8 @@ MonoBehaviour:
   m_DetectableTags: []
   m_RaysPerDirection: 30
   m_MaxRayDegrees: 180
-  m_SphereCastRadius: 1.01
-  m_RayLength: 32
+  m_SphereCastRadius: 0
+  m_RayLength: 10
   m_RayLayerMask:
     serializedVersion: 2
     m_Bits: 0
